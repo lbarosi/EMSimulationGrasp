@@ -159,7 +159,7 @@ def gain_max(data):
 #######################################
 
 
-def run_grasp(tor_file, gpxfile="../grasp/STANDARD/batch.gxp", tcifile="../grasp/STANDARD/BINGO_SIMPLES.tci"):
+def run_grasp(tor_file, gpxfile="../grasp/STANDARD/batch.gxp", tcifile="../grasp/STANDARD/BINGO_SIMPLES.tci", daemon=True):
     """ Roda Grasp a partir de tor file.
 
     Cria arquivos gxp e tci.
@@ -194,11 +194,15 @@ def run_grasp(tor_file, gpxfile="../grasp/STANDARD/batch.gxp", tcifile="../grasp
     # troca de diretório
     os.chdir(dst)
     # Executa grasp
-    command = "grasp-analysis batch.gxp run.out run.log"
-    process = run_daemon(thread=run_command, command=command)
+    command = "grasp-analysis batch.gxp " + filename + ".out " + filename +\
+        ".log"
+    if daemon:
+        result = run_daemon(thread=run_command, command=command)
+    else:
+        result = run_command(command)
     # retorna diretório
     os.chdir(cwd)
-    return process
+    return result
 
 
 def rotate_feed(axis, angle):
@@ -256,12 +260,31 @@ def translate_secondary(coord, displacement):
 
 def _make_tor_feed(filename, string, torfile, idx):
     # le TOR padrão
+    with open(torfile, 'r') as file:
+        filedata = file.read()
+        filedata = filedata.replace('dual_cut.cut', filename + ".cut")
+    with open(torfile, 'w') as file:
+        file.write(filedata)
+
     with open(torfile, 'r') as file_in:
         lines = file_in.readlines()
     # cria TOR em nova pasta com feed removido.
     with open(filename, "w") as file_out:
         file_out.writelines(lines[:-idx])
         file_out.writelines(string)
+    return
+
+
+def _make_tor(filename, string, torfile, idx_i, idx_f):
+    # le TOR padrão
+    with open(torfile, 'r') as file_in:
+        lines = file_in.readlines()
+    # cria TOR em nova pasta com feed removido.
+    with open(filename, "w") as file_out:
+        file_out.writelines(lines[:-idx_i])
+        file_out.writelines(string)
+        if idx_f > 1:
+            file_out.writelines(lines[-idx_f:])
     return
 
 
@@ -277,18 +300,18 @@ def make_tor(object="feed", type="rotation", coord="x", value=0):
             # cria string para feed:
             feed_string = translate_feed(coord, value)
             # grava arquivo tor
-            _make_tor_feed(filename, feed_string,
-                           "../grasp/STANDARD/BINGO_01.tor", 5)
+            _make_tor(filename, feed_string,
+                      "../grasp/STANDARD/BINGO_CUT.tor", 13, 7)
         elif type == "rotation":
             feed_string = rotate_feed(coord, value)
             # grava arquivo tor
-            _make_tor_feed(filename, feed_string,
-                           "../grasp/STANDARD/BINGO_01.tor", 5)
+            _make_tor(filename, feed_string,
+                      "../grasp/STANDARD/BINGO_CUT.tor", 13, 7)
     elif object == "secondary":
         if type == "translation":
             sec_string = translate_secondary(coord, value)
-            _make_tor_feed(filename, sec_string,
-                           "../grasp/STANDARD/BINGO_CUT.tor", 7)
+            _make_tor(filename, sec_string,
+                      "../grasp/STANDARD/BINGO_CUT.tor", 7, 0)
     print("Arquivo {} gerado com sucesso.".format(filename))
     return filename
 
