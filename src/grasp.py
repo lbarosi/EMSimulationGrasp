@@ -13,7 +13,7 @@ import pandas as pd
 #######################################
 # Funções para manipulação de cuts
 #######################################
-
+GRASP = "grasp-analysis"
 
 def read_cut(filename):
     """Lê o arquivo cut indicado no argumento e retorna dataframe com componentes reais e complexas das polarizações dos campos."""
@@ -38,11 +38,18 @@ def load_cuts(mask):
     for file in cut_files:
         df = read_cut(file)
         dfs.append(df)
-        params.append(float(file.split("/")[-2].split("_")[-1]))
+        param = list(filter(lambda val: val != 0,
+                            [float(val) for val in
+                             file.split("/")[-2].split("_")[-5:]]))
+        if len(param) == 0:
+            param = 0.
+        else:
+            param = param[0]
+        params.append(param)
         gains.append(gain_dB(df))
         gains_max.append(gain_max(df))
     df_gains = pd.DataFrame({"Values": params, "Gain": gains,
-                            "Gain_Max": gains_max})
+                            "Gain_Max": gains_max}).sort_values(by="Values")
     return df_gains, dfs
 
 def plot_beam_pattern(data, ax=None, label="padrão", norm=True):
@@ -85,28 +92,28 @@ def I1(data):
     Eco2 = data.Eco ** 2 + data.ImEco ** 2
     Ecx2 = data.Ecx ** 2 + data.ImEcx ** 2
     EE2 = Eco2 + Ecx2
-    I1 = 2 * np.pi * np.trapz(EE2 * np.cos(data.theta), data.theta)
+    I1 = 2 * np.pi * np.trapz(EE2 * np.sin(data.theta), data.theta)
     return I1
 
 
 def I2(data):
     # ref Pontoppidan
     Eco2 = data.Eco ** 2 + data.ImEco ** 2
-    I2 = 2 * np.pi * np.trapz(Eco2 * np.cos(data.theta), data.theta)
+    I2 = 2 * np.pi * np.trapz(Eco2 * np.sin(data.theta), data.theta)
     return I2
 
 
 def I3(data):
     # ref Pontoppidan
     Eco = np.sqrt(data.Eco ** 2 + data.ImEco ** 2)
-    I3 = 2 * np.pi * np.trapz(Eco * np.cos(data.theta), data.theta)
+    I3 = 2 * np.pi * np.trapz(Eco * np.sin(data.theta), data.theta)
     return I3
 
 
 def I4(data):
     # ref Pontoppidan
-    ReI4 = np.trapz(data.Eco * np.cos(data.theta), data.theta)
-    ImI4 = np.trapz(data.ImEco * np.cos(data.theta), data.theta)
+    ReI4 = np.trapz(data.Eco * np.sin(data.theta), data.theta)
+    ImI4 = np.trapz(data.ImEco * np.sin(data.theta), data.theta)
     I4 = 2 * np.pi * np.sqrt(ReI4 ** 2 + ImI4 ** 2)
     return I4
 
@@ -194,7 +201,7 @@ def run_grasp(tor_file, gpxfile="../grasp/STANDARD/batch.gxp", tcifile="../grasp
     # troca de diretório
     os.chdir(dst)
     # Executa grasp
-    command = "grasp-analysis batch.gxp " + filename + ".out " + filename +\
+    command = GRASP + " batch.gxp " + filename + ".out " + filename +\
         ".log"
     if daemon:
         result = run_daemon(thread=run_command, command=command)
@@ -205,35 +212,23 @@ def run_grasp(tor_file, gpxfile="../grasp/STANDARD/batch.gxp", tcifile="../grasp
     return result
 
 
-def rotate_feed(axis, angle):
-    if axis == "x":
-        dict = "corneta_coor  coor_sys\n(\n" + \
-               " origin           : struct(x: 0.0 cm, y: 0.0 m, z: 0.0 m),\n" +\
-               " x_axis           : struct(x: 1.0, y: 0.0, z: 0.0),\n" + \
-               " y_axis           : struct(x: 0.0, y: " +\
-               str(np.cos(np.radians(angle))) + ", z: " +\
-               str(-np.sin(np.radians(angle))) + "),\n" +\
-               " base             : ref(dual_feed_coor)\n)"
-    elif axis == "y":
-        dict = "corneta_coor  coor_sys\n(\n" +\
-               " origin           : struct(x: 0.0 cm, y: 0.0 m, z: 0.0 m),\n" +\
-               " x_axis           : struct(x: " +\
-               str(np.cos(np.radians(angle))) +\
-               ", y: 0.0, z: " + str(-np.sin(np.radians(angle))) + "),\n" +\
-               " y_axis           : struct(x: 0.0, y: 1.0, z: 0.0),\n" + \
-               " base             : ref(dual_feed_coor)\n)"
-    return dict
-
-
-def translate_feed(coord, displacement):
-    if coord == "x":
-        dict = "corneta_coor  coor_sys\n(\norigin           : struct(x: " + \
-                str(displacement) + \
-                " cm, y: 0.0 m, z: 0.0 m),\nbase             : ref(dual_feed_coor)\n)\n"
-    if coord == "y":
-        dict = "corneta_coor  coor_sys\n(\norigin           : struct(x: 0.0 cm, y: " + str(displacement) + " cm, z: 0.0 m),\nbase             : ref(dual_feed_coor)\n)\n"
-    if coord == "z":
-        dict = "corneta_coor  coor_sys\n(\norigin           : struct(x: 0.0 cm, y: 0.0 cm, z: " + str(displacement) + " cm),\nbase             : ref(dual_feed_coor)\n)\n"
+def move_feed(x=0, y=0, z=0, theta=0, phi=0):
+    x0 = x
+    y0 = y
+    z0 = z
+    xx = np.cos(np.radians(theta))
+    xy = np.sin(np.radians(theta)) * np.sin(np.radians(phi))
+    xz = np.sin(np.radians(theta)) * np.cos(np.radians(phi))
+    yx = 0.
+    yy = np.cos(np.radians(phi))
+    yz = -np.sin(np.radians(phi))
+    dict = "corneta_coor  coor_sys\n(\n  origin           : struct(x: " + \
+        str(x0) + " m, y: " + str(y0) + " m, z: " + str(z0) + " m),\n" + \
+        "  x_axis           : struct(x: " +\
+        str(xx) + ", y: " + str(xy) + ", z: " + str(xz) + "),\n" +\
+        "  y_axis           : struct(x: " +\
+        str(yx) + ", y: " + str(yy) + ", z: " + str(yz) + "),\n" +\
+        "  base             : ref(dual_feed_coor)\n)\n"
     return dict
 
 
@@ -241,38 +236,16 @@ def rotate_secondary(axis, angle):
     pass
 
 
-def translate_secondary(coord, displacement):
-    x0 = 226.5414993
-    y0 = 0
-    z0 = 48.3552713
-    if coord == "x":
-        x0 = x0 + displacement
-    elif coord == "y":
-        y0 = y0 + displacement
-    elif coord == "z":
-        z0 = z0 + displacement
+def translate_secondary(x=0, y=0, z=0):
+    x0 = 226.5414993 + x
+    y0 = 0 + y
+    z0 = 48.3552713 + z
     dict = "dual_sub_coor  coor_sys\n(\n  origin           : struct(x: " +\
         str(x0) + " m, y: " + str(y0) + " m, z: " + str(z0) + " m),\n" + \
         "  x_axis           : struct(x: 0.871557553071891E-01, y: 0.0, z: -0.996194696992929),\n" +\
-        "  base             : ref(dual_cut_coor)\n)"
+        "  y_axis           : struct(x: 0.0, y: -1.0, z: 0.0),\n" +\
+        "  base             : ref(dual_cut_coor)\n)\n"
     return dict
-
-
-def _make_tor_feed(filename, string, torfile, idx):
-    # le TOR padrão
-    with open(torfile, 'r') as file:
-        filedata = file.read()
-        filedata = filedata.replace('dual_cut.cut', filename + ".cut")
-    with open(torfile, 'w') as file:
-        file.write(filedata)
-
-    with open(torfile, 'r') as file_in:
-        lines = file_in.readlines()
-    # cria TOR em nova pasta com feed removido.
-    with open(filename, "w") as file_out:
-        file_out.writelines(lines[:-idx])
-        file_out.writelines(string)
-    return
 
 
 def _make_tor(filename, string, torfile, idx_i, idx_f):
@@ -284,41 +257,35 @@ def _make_tor(filename, string, torfile, idx_i, idx_f):
         file_out.writelines(lines[:-idx_i])
         file_out.writelines(string)
         if idx_f > 1:
+            file_out.writelines("\n")
             file_out.writelines(lines[-idx_f:])
+    with open(filename, 'r') as file:
+        filedata = file.read()
+        datafile = filename.split(".")[-2].split("/")[-1] + ".cut"
+        filedata = filedata.replace('dual_cut.cut', datafile)
+    with open(filename, 'w') as file:
+        file.write(filedata)
     return
 
 
-def make_tor(object="feed", type="rotation", coord="x", value=0):
-    dirname = "../grasp/STANDARD/job" + "_" + object + "_" + type + \
-        "_" + str(coord) + "_" + str(value) + "/"
+def make_tor(object="feed", X0=0, Y0=0, Z0=0, theta=0, phi=0,
+             torfile="../grasp/STANDARD/BINGO_CUT.tor", verbose=True):
+    dirname = "../data/raw/grasp/job" + "_" + object + "_" + str(X0) + "_" +\
+        str(Y0) + "_" + str(Z0) + "_" + str(theta) + "_" + str(phi) + "/"
     # cria pasta
     if not os.path.isdir(dirname):
         os.mkdir(dirname)
     filename = dirname + "bingo.tor"
     if object == "feed":
-        if type == "translation":
-            # cria string para feed:
-            feed_string = translate_feed(coord, value)
-            # grava arquivo tor
-            _make_tor(filename, feed_string,
-                      "../grasp/STANDARD/BINGO_CUT.tor", 13, 7)
-        elif type == "rotation":
-            feed_string = rotate_feed(coord, value)
-            # grava arquivo tor
-            _make_tor(filename, feed_string,
-                      "../grasp/STANDARD/BINGO_CUT.tor", 13, 7)
+        feed_string = move_feed(x=X0, y=Y0, z=Z0, theta=theta, phi=phi)
+        # grava arquivo tor
+        _make_tor(filename, feed_string, torfile, 15, 7)
     elif object == "secondary":
-        if type == "translation":
-            sec_string = translate_secondary(coord, value)
-            _make_tor(filename, sec_string,
-                      "../grasp/STANDARD/BINGO_CUT.tor", 7, 0)
-    print("Arquivo {} gerado com sucesso.".format(filename))
+        sec_string = translate_secondary(x=X0, y=Y0, z=Z0)
+        _make_tor(filename, sec_string, torfile, 7, 0)
+    if verbose:
+        print("Arquivo {} gerado com sucesso.".format(filename))
     return filename
-
-
-def make_tor_range(object="feed", type="rotation", **kwargs):
-    pass
-
 
 #######################################
 # Utilidades para processamento paralelo
