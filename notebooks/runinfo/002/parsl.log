@@ -1,0 +1,92 @@
+1668001039.041908 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:87 __init__ INFO: Starting DataFlowKernel with config
+Config(
+    app_cache=True, 
+    checkpoint_files=None, 
+    checkpoint_mode=None, 
+    checkpoint_period=None, 
+    executors=[ThreadPoolExecutor(
+        label='threads', 
+        managed=True, 
+        max_threads=2, 
+        storage_access=None, 
+        thread_name_prefix='', 
+        working_dir=None
+    )], 
+    garbage_collect=True, 
+    initialize_logging=True, 
+    internal_tasks_max_threads=10, 
+    max_idletime=120.0, 
+    monitoring=None, 
+    retries=0, 
+    retry_handler=None, 
+    run_dir='runinfo', 
+    strategy='simple', 
+    usage_tracking=False
+)
+1668001039.042114 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:89 __init__ INFO: Parsl version: 2022.11.07
+1668001039.042233 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.usage_tracking.usage:129 __init__ DEBUG: Tracking status: False
+1668001039.042403 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:115 __init__ INFO: Run id is: d6b0fb48-4745-410c-ad68-dd23efd3fa2e
+1668001039.277918 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:122 __init__ DEBUG: Considering candidate for workflow name: /opt/miniconda3/envs/uirapuru/lib/python3.8/site-packages/parsl/dataflow/dflow.py
+1668001039.278038 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:122 __init__ DEBUG: Considering candidate for workflow name: /opt/miniconda3/envs/uirapuru/lib/python3.8/site-packages/parsl/dataflow/dflow.py
+1668001039.278101 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:122 __init__ DEBUG: Considering candidate for workflow name: /opt/miniconda3/envs/uirapuru/lib/python3.8/site-packages/typeguard/__init__.py
+1668001039.278171 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:122 __init__ DEBUG: Considering candidate for workflow name: /tmp/ipykernel_50715/562115998.py
+1668001039.278240 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:128 __init__ DEBUG: Using 562115998.py as workflow name
+1668001039.278471 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.memoization:174 __init__ INFO: App caching initialized
+1668001039.278561 2022-11-09 10:37:19 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.strategy:127 __init__ DEBUG: Scaling strategy: simple
+1668001040.279002 2022-11-09 10:37:20 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001040.279202 2022-11-09 10:37:20 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001045.279214 2022-11-09 10:37:25 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001045.279366 2022-11-09 10:37:25 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001050.279445 2022-11-09 10:37:30 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001050.279593 2022-11-09 10:37:30 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001055.279653 2022-11-09 10:37:35 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001055.279807 2022-11-09 10:37:35 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001060.279836 2022-11-09 10:37:40 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001060.280084 2022-11-09 10:37:40 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001065.279969 2022-11-09 10:37:45 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001065.280229 2022-11-09 10:37:45 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001070.280159 2022-11-09 10:37:50 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001070.280368 2022-11-09 10:37:50 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001075.280311 2022-11-09 10:37:55 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001075.280513 2022-11-09 10:37:55 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001080.280491 2022-11-09 10:38:00 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001080.280741 2022-11-09 10:38:00 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001085.280680 2022-11-09 10:38:05 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001085.280948 2022-11-09 10:38:05 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001090.280845 2022-11-09 10:38:10 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001090.281096 2022-11-09 10:38:10 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001095.280990 2022-11-09 10:38:15 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001095.281247 2022-11-09 10:38:15 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001100.281173 2022-11-09 10:38:20 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001100.281426 2022-11-09 10:38:20 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001105.281380 2022-11-09 10:38:25 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.dataflow.strategy:166 _general_strategy DEBUG: general strategy starting with strategy_type simple for 0 executors
+1668001105.281621 2022-11-09 10:38:25 MainProcess-50715 FlowControl-Thread-139902537664064 parsl.process_loggers:28 wrapped DEBUG: Normal ending for _general_strategy on thread FlowControl-Thread
+1668001106.212218 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1037 atexit_cleanup INFO: DFK cleanup because python process is exiting
+1668001106.212562 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1073 cleanup INFO: DFK cleanup initiated
+1668001106.212883 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:975 log_task_states INFO: Summary of tasks in DFK:
+1668001106.213164 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.unsched: 0
+1668001106.213409 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.pending: 0
+1668001106.214119 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.running: 0
+1668001106.215318 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.exec_done: 0
+1668001106.215862 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.failed: 0
+1668001106.216111 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.dep_fail: 0
+1668001106.216510 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.launched: 0
+1668001106.216722 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.fail_retryable: 0
+1668001106.217189 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.memo_done: 0
+1668001106.217375 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.joining: 0
+1668001106.217581 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:979 log_task_states INFO: Tasks in state States.running_ended: 0
+1668001106.217770 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:981 log_task_states INFO: End of summary
+1668001106.218004 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1097 cleanup INFO: Closing flowcontrol
+1668001106.218287 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1099 cleanup INFO: Terminated flow control
+1668001106.218483 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1101 cleanup INFO: Scaling in and shutting down executors
+1668001106.218644 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1116 cleanup INFO: Shutting down executor threads
+1668001106.218807 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.executors.threads:105 shutdown DEBUG: Shutting down executor, which involves waiting for running tasks to complete
+1668001106.218967 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.executors.threads:107 shutdown DEBUG: Done with executor shutdown
+1668001106.219115 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1118 cleanup INFO: Shut down executor threads
+1668001106.219265 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1116 cleanup INFO: Shutting down executor _parsl_internal
+1668001106.219410 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.executors.threads:105 shutdown DEBUG: Shutting down executor, which involves waiting for running tasks to complete
+1668001106.219562 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.executors.threads:107 shutdown DEBUG: Done with executor shutdown
+1668001106.219729 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1118 cleanup INFO: Shut down executor _parsl_internal
+1668001106.219877 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1124 cleanup INFO: Terminated executors
+1668001106.220021 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.dataflow.dflow:1141 cleanup INFO: DFK cleanup complete
+1668001106.220091 2022-11-09 10:38:26 MainProcess-50715 MainThread-139904417187648 parsl.process_loggers:28 wrapped DEBUG: Normal ending for cleanup on thread MainThread
