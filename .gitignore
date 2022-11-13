@@ -1,2 +1,5 @@
 data/
 grasp/
+*.pyc
+.ipynb_che*
+refs/
