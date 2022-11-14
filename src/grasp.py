@@ -48,11 +48,7 @@ def load_cuts(mask):
     """Carrega cuts de acordo com a máscara e calcula métricas."""
     cut_files = glob.glob(mask, recursive=True)
     dfs = []
-    gains = []
-    eta_spill = []
-    eta_pol = []
-    eta_amp = []
-    eta_phase = []
+    eta_MBs = []
     gains_max = []
     FWHMs = []
     params = []
@@ -71,19 +67,11 @@ def load_cuts(mask):
         params.append(param)
         FWHM = get_FWHM(df)
         FWHMs.append(FWHM)
-        gains.append(gain(df, FWHM))
-        eta_spill.append(n_spill(df, FWHM))
-        eta_pol.append(n_pol(df, FWHM))
-        eta_phase.append(n_phase(df, FWHM))
-        eta_amp.append(n_amp(df, FWHM))
+        eta_MBs.append(n_MB(df, FWHM))
         gains_max.append(gain_max(df, FWHM))
         spill_over.append(read_spill_over(file))
     df_gains = pd.DataFrame({"Values": params, "FWHM": FWHMs,
-                             "Gain": gains,
-                             "eta_spill": eta_spill,
-                             "eta_pol": eta_pol,
-                             "eta_amp": eta_amp,
-                             "eta_phase": eta_phase,
+                             "eta_MB": eta_MBs,
                              "Gain_Max": gains_max,
                              "Spill_Over": spill_over})
     return df_gains, dfs
@@ -120,8 +108,7 @@ def plot_beam_pattern(data, ax=None, label="padrão", norm=True):
 
 def normalize(data):
     """Calcula variação fracional para métricas indicadas."""
-    columns = ["Gain", "eta_spill", "eta_pol", "eta_amp", "eta_phase",
-               "Gain_Max", "Spill_Over"]
+    columns = ["eta_MB", "Gain_Max", "Spill_Over"]
     zero_values = data[data.Values == 0]
     for column in columns:
         new_columns = "delta_" + column
@@ -216,7 +203,7 @@ def I4(data, theta_max):
     return I4
 
 
-def n_spill(data, FWHM):
+def n_MB(data, FWHM):
     # ref Pontoppidan
     result = I1(data, FWHM) / I1(data, np.pi)
     return result
