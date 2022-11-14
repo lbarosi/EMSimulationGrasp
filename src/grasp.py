@@ -31,7 +31,21 @@ def read_cut(filename):
     return data
 
 
+def read_spill_over(cut_file):
+    """Lê valor de spill_over no primário, a partir do cut_file."""
+    out_file = cut_file[:-4] + ".out"
+    matches = []
+    with open(out_file, 'r') as fp:
+        for l_no, line in enumerate(fp):
+            # search string
+            if 'Spill-over' in line:
+                matches.append(line)
+    result = float(matches[-1].split()[-2])
+    return result
+
+
 def load_cuts(mask):
+    """Carrega cuts de acordo com a máscara e calcula métricas."""
     cut_files = glob.glob(mask, recursive=True)
     dfs = []
     gains = []
@@ -42,6 +56,7 @@ def load_cuts(mask):
     gains_max = []
     FWHMs = []
     params = []
+    spill_over = []
     for file in cut_files:
         df = read_cut(file)
         dfs.append(df)
@@ -62,13 +77,15 @@ def load_cuts(mask):
         eta_phase.append(n_phase(df, FWHM))
         eta_amp.append(n_amp(df, FWHM))
         gains_max.append(gain_max(df, FWHM))
+        spill_over.append(read_spill_over(file))
     df_gains = pd.DataFrame({"Values": params, "FWHM": FWHMs,
                              "Gain": gains,
                              "eta_spill": eta_spill,
                              "eta_pol": eta_pol,
                              "eta_amp": eta_amp,
                              "eta_phase": eta_phase,
-                             "Gain_Max": gains_max})
+                             "Gain_Max": gains_max,
+                             "Spill_Over": spill_over})
     return df_gains, dfs
 
 def plot_beam_pattern(data, ax=None, label="padrão", norm=True):
@@ -102,7 +119,9 @@ def plot_beam_pattern(data, ax=None, label="padrão", norm=True):
     return ax
 
 def normalize(data):
-    columns = ["Gain", "eta_spill", "eta_pol", "eta_amp", "eta_phase", "Gain_Max"]
+    """Calcula variação fracional para métricas indicadas."""
+    columns = ["Gain", "eta_spill", "eta_pol", "eta_amp", "eta_phase",
+               "Gain_Max", "Spill_Over"]
     zero_values = data[data.Values == 0]
     for column in columns:
         new_columns = "delta_" + column
@@ -115,6 +134,7 @@ def normalize(data):
 
 
 def get_B(data, type="co"):
+    """Pega cut dataframe e calcula módulo quadrado do campo."""
     Bco = data.Eco ** 2 + data.ImEco ** 2
     Bcx = data.Ecx ** 2 + data.ImEcx ** 2
     BB = Bco + Bcx
@@ -134,6 +154,7 @@ def _interpolate_beam(x, data):
 
 
 def get_FWHM(data, theta0=.1):
+    """Calcula FWHM com dados em cut dataframe."""
     BB = get_B(data, type="total")
     FWHM_func = lambda theta: _interpolate_beam(theta, data) +\
         BB.max() / 2
@@ -144,12 +165,14 @@ def get_FWHM(data, theta0=.1):
 # Métricas para ganho da antena.
 #######################################
 def center_beam(data):
+    """Centraliza amplitudes em torno do ângulo de máxima intensidade."""
     df = data.copy()
     BB = get_B(df, type="total")
     idx = BB.argmax()
     theta_c = df.iloc[idx].theta
     df.theta = df.theta - theta_c
     return df
+
 
 def I1(data, theta_max):
     # ref Pontoppidan
@@ -283,6 +306,7 @@ def run_grasp(tor_file, gpxfile="../grasp/STANDARD/batch.gxp", tcifile="../grasp
 
 
 def move_feed(x=0., y=0., z=0., theta=0., phi=0.):
+    """Constroi dicionário para mocimento do feed."""
     x0 = x
     y0 = y
     z0 = z
@@ -307,6 +331,7 @@ def rotate_secondary(axis, angle):
 
 
 def translate_secondary(x=0, y=0, z=0):
+    """Constroi dicionário para translações do secundário."""
     x0 = 226.5414993 + x
     y0 = 0 + y
     z0 = 48.3552713 + z

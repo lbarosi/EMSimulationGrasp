@@ -1,0 +1,48 @@
+ Tci file: Job_03.tci
+ Out file: Job_03.out
+ Log file: Job_03.log
+ 
+ 
+ GRASP-SE version 10.3.0 (Linux amd64/em64t 64-bit)
+ 
+ 
+ GRASP-SE found   8 CPU cores
+ (Student edition limited to 1 CPU core)
+ 
+ ----- TASK No. 1 -----     Started at 16:47:52 on November 14, 2022
+ 
+ dual_sub_po get_currents ( source : sequence(ref(dual_feed)))
+ 
+  PO1 =  170  PO2 =  570  Face =    1, Final PO-values from auto-convergence 
+  PTD =  560              Edge =    1, Final PTD-value from auto-convergence. 
+ 
+  Calculating currents.
+  No. of PO-points (target):              62350                               
+  No. of PTD points (target):               560 
+ 
+  Relative power hitting scatterer:    0.989964
+  Spill-over:     0.0438 dB
+ Total task time:  1.17 sec
+ 
+ ----- TASK No. 2 -----     Started at 16:47:53 on November 14, 2022
+ 
+ dual_main_po get_currents ( source : sequence(ref(dual_sub_po)))
+ 
+  PO1 =  305  PO2 =  940  Face =    1, Final PO-values from auto-convergence 
+  PTD =  940              Edge =    1, Final PTD-value from auto-convergence. 
+ 
+  Calculating currents.
+  No. of PO-points (target):             183690                               
+  No. of PO points (source):              62350 
+  No. of PTD points (source):               560                      
+  No. of PTD points (target):               940                      
+ Estimated task time: 13:44 min, Estimated remaining time:  1.02 sec  
+ 
+  Relative power hitting scatterer:    0.988340
+  Spill-over:     0.0509 dB
+                                                                     
+ Total task time: 13:45 min
+ 
+ ----- END OF TASKS -----     Completed at 17:01:38 on November 14, 2022
+ 
+ Total time was 13:46 min
