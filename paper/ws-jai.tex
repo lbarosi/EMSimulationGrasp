@@ -1,0 +1,516 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Trim Size : 11in x 8.5in
+%% Text Area : 9.6in (include Runningheads) x 7in
+%% ws-jai.tex, 26 April 2012
+%% Tex file to use with ws-jai.cls written in Latex2E.
+%% The content, structure, format and layout of this style file is the
+%% property of World Scientific Publishing Co. Pte. Ltd.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+
+%\documentclass[draft]{ws-jai}
+\documentclass{ws-jai}
+\usepackage[flushleft]{threeparttable}
+\begin{document}
+
+\catchline{}{}{}{}{} % Publisher's Area please ignore
+
+\markboth{Author's Name}{Paper Title}
+
+\title{Instructions for Typesetting Manuscript\\
+Using \LaTeX\footnote{For the title, try not to use more than
+three lines. Typeset the title in 11 pt Times Roman,
+boldface, with the first letter of important words capitalized.}}
+
+\author{First Author$^{2}$, Second Author$^{3}$, Third Author$^{3}$ and Fourth Author$^{4}$}
+
+\address{
+$^{2}$Department, University Name, City, State ZIP/Zone, Country, fauthor@university.com\\
+$^{3}$Group, Company, Address, City, State ZIP/Zone, Country\\
+$^{4}$Group, Company, Address, City, State ZIP/Zone, Country, fauthor@company.com
+}
+
+\maketitle
+
+\corres{$^{2}$Corresponding author.}
+
+\begin{history}
+\received{(to be inserted by publisher)};
+\revised{(to be inserted by publisher)};
+\accepted{(to be inserted by publisher)};
+\end{history}
+
+\begin{abstract}
+The abstract should summarize the context, content and conclusions
+of the paper. It should not contain any references or displayed
+equations. Typeset the abstract in 8~pt Times Roman with
+baselineskip of 10 pt, making an indentation of 1.6~cm on the left
+and right margins.
+\end{abstract}
+
+\keywords{Keyword 1; keyword 2; keyword 3.}
+
+\section{The Main Text}
+\noindent Contributions are to be in English. Authors are
+encouraged to have their contribution checked for grammar.
+American spelling should be used. Abbreviations are allowed but
+should be spelt out in full when first used. Integers ten and
+below are to be spelt out. Italicize foreign language phrases
+({\it e.g.}~Latin, French).
+
+The text is to be typeset in 11~pt Times Roman,
+single-spaced with baselineskip of 13~pt. Text area is 17.8~cm (7
+inches) across and 24.4~cm (9.6 inches) deep (including running
+title). Final pagination and insertion of running titles will be
+done by the publisher.
+
+\section{Major Headings}
+Major headings should be typeset in boldface, with the first
+letter of important words capitalized.
+
+\subsection{Subheadings}
+Subheadings should be typeset in bold italics, with the first
+letter of first word capitalized and the section number in
+boldface.
+
+\subsubsection{Sub-subheadings}
+Typeset in italics (section number to be in roman) and capitalize
+the first letter of the first word only.
+
+\subsection{Numbering and spacing}
+Sections, subsections and sub-subsections are numbered with Arabic
+numerals. Use double spacing after major and subheadings, and
+single spacing after sub-subheadings.
+
+\section{Lists of Items}
+Lists are broadly classified into four major categories that can
+randomly be used as desired by the author:
+\begin{alphlist}[(d)]
+\item Numbered list.
+\item Lettered list.
+\item Unnumbered list.
+\item Bulleted list.
+\end{alphlist}
+
+\subsection{Numbered and lettered list}
+
+\begin{arabiclist}[(5)]
+\item The \verb|\begin{arabiclist}[]| command is used for the arabic
+number list (arabic numbers appearing within parenthesis), {\it e.g.},
+(1), (2), {\it etc.}
+
+\smallskip
+
+\item The \verb|\begin{romanlist}[]| command is used for the roman
+number list (roman numbers appearing within parenthesis), {\it e.g.}, (i),
+(ii), {\it etc.}
+
+\smallskip
+
+\item The \verb|\begin{Romanlist}[]| command is used for the cap roman
+\hbox{number list} (cap roman numbers appearing within parenthesis),
+{\it e.g.}, (I), (II), {\it etc.}
+
+\smallskip
+
+\item The \verb|\begin{alphlist}[]| command is used for the alphabetic
+list (alphabets appearing within parenthesis), {\it e.g.}, (a), (b), {\it etc.}
+
+\smallskip
+
+\item The \verb|\begin{Alphlist}[]| command is used for the cap
+alphabetic list (cap alphabets appearing within parenthesis),
+{\it e.g.}, (A), (B), {\it etc.}
+\end{arabiclist}
+Note: For all the above mentioned lists (with the exception of
+alphabetic list), it is obligatory to enter the last entry's number
+in the list within the square bracket, to enable unit alignment.
+
+\subsection{Bulleted and unnumbered list}
+
+\begin{enumerate}[-]
+\item[-] The \verb|\begin{itemlist}| command is used for the bulleted list.
+
+\smallskip
+
+\item[-] The \verb|\begin{unnumlist}| command is used for creating the
+  unnumbered list with the turnovers hangindent by 1\,pica.
+\end{enumerate}
+
+Lists may be laid out with each item marked by a dot:
+\begin{itemlist}
+\item item one
+\item item two
+\item item three.
+\end{itemlist}
+
+Items may also be numbered with lowercase Roman numerals:
+\begin{romanlist}[(iii)]
+\item item one
+\item item two
+    \begin{alphlist}[(b)]
+    \item lists within lists can be numbered with lowercase Roman letters
+    \item second item.
+    \end{alphlist}
+\item item three.
+\end{romanlist}
+
+\section{Theorems and Definitions}
+\noindent{\bf Input:}
+
+\begin{verbatim}
+\begin{theorem}
+We have $\# H^2 (M \supset N) < \infty$ for an inclusion ...
+\end{theorem}
+\end{verbatim}
+
+\noindent{\bf Output:}
+
+\begin{theorem}
+We have $\# H^2 (M \supset N) < \infty$ for an inclusion $M \supset
+N$ of factors of finite index.
+\end{theorem}
+
+\noindent{\bf Input:}
+
+\begin{verbatim}
+\begin{theorem}[Longo, 1998]
+For a given $Q$-system...
+\end{theorem}
+\end{verbatim}
+
+\noindent{\bf Output:}
+
+\begin{theorem}[Longo, 1998]
+For a given $Q$-system...
+\end{theorem}
+
+\subsection{Proofs}
+The WSPC document styles also provide a predefined proof environment
+for proofs. The proof \hbox{environment} produces the heading
+`Proof' with appropriate spacing and punctuation. It also appends a
+`Q.E.D.' symbol, $\blacksquare$, at the end of a proof, {\it e.g.}
+
+\begin{verbatim}
+\begin{proof}
+This is just an example.
+\end{proof}
+\end{verbatim}
+
+\noindent to produce
+
+\begin{proof}
+This is just an example.
+\end{proof}
+
+The proof environment takes an argument in curly
+braces, which allows you to substitute a different name for the standard
+`Proof'. If you want to display, `Proof of Lemma', then write {\it e.g.}
+
+\begin{verbatim}
+\begin{proof}[Proof of Lemma]
+This is just an example.
+\end{proof}
+\end{verbatim}
+
+\noindent produces
+
+\begin{proof}[Proof of Lemma]
+This is just an example.
+\end{proof}
+
+\section{Equations}
+\noindent Displayed equations should be numbered consecutively in
+each section, with the number set flush right and enclosed in
+parentheses:
+\begin{equation}
+\mu(n, t) = \frac{\displaystyle\sum^\infty_{i=1} 1(d_i < t, N(d_i) = n)}
+{\displaystyle\int^t_{\sigma=0} 1(N(\sigma) = n)d\sigma}\,\,
+.\label{aba:eq1}
+\end{equation}
+
+\noindent Equations should be referred to in abbreviated form,
+{\it e.g.}~``Eq.~(\ref{aba:eq1})'' or ``(2)''. In multiple-line equations,
+the number should be given on the last line.
+
+Displayed equations are to be centered on the page width. Standard
+English letters like x are to appear as $x$ (italicized) in the
+text if they are used as mathematical symbols. Punctuation marks
+are used at the end of equations as if they appeared directly in
+the text.
+
+\section{Illustrations and Photographs}
+Figures are to be inserted in the text nearest their
+first reference. Please send one set of originals with copies. If the
+publisher is required to reduce the figures, ensure that the
+figures (including lettering and numbers) are large enough to be
+clearly seen after reduction.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics{jaif1} %100 percent
+\end{center}
+\caption{Labeled tree {\it T}.}
+\label{aba:fig1}
+\end{figure}
+
+\begin{rotatefigure}
+\begin{center}
+\includegraphics[width=7in]{jaif2}
+\end{center}
+\caption{The bifurcating response curves of system
+$\alpha=0.5, \beta=1.8; \delta=0.2, \gamma=0$: (a)
+$\mu=-1.3$; and (b) $\mu=0.3$.}
+\label{aba:fig2}
+\end{rotatefigure}
+
+Figures are to be sequentially numbered with Arabic
+numerals. The caption must be placed below the figure. For those
+figures with multiple parts which appear on different pages, it is
+best to place the full caption below the first part, and have
+{\it e.g.}~``Fig.~1 ({\it continued})'' below the last part. Typeset in
+9 pt Times Roman with baselineskip of 11 pt. Use double spacing
+between a caption and the text that follows immediately.
+Previously published material must be accompanied by written
+permission from the author and publisher.
+
+Very large figures and tables should be placed on a separate page
+by themselves. Landscape tables and figures can be typeset with the following environments:
+\begin{itemlist}
+\item \verb|rotatetable| and
+\item \verb|rotatefigure|.
+\end{itemlist}
+
+\section{Tables}
+Tables should be inserted in the text as close to the
+point of reference as possible. Some space should be left above
+and below the table. Tables should be numbered sequentially in the
+text with Arabic numerals. Captions are to be centered above the
+tables. Typeset tables and captions in 9 pt Times Roman with
+baselineskip of 11 pt.
+
+If tables need to extend over to a second page, the continuation
+of the table should be preceded by a caption, {\it e.g.}~``Table~\ref{aba:tbl1} ({\it
+continued})''.
+
+\begin{wstable}[h]
+\caption{Comparison of acoustic for frequencies for piston-cylinder problem.}
+\begin{tabular}{@{}cccc@{}} \toprule
+Piston mass & Analytical frequency & TRIA6-$S_1$ model &
+\% Error \\
+& (Rad/s) & (Rad/s) \\ \colrule
+1.0\hphantom{00} & \hphantom{0}281.0 & \hphantom{0}280.81 & 0.07 \\
+0.1\hphantom{00} & \hphantom{0}876.0 & \hphantom{0}875.74 & 0.03 \\
+0.01\hphantom{0} & 2441.0\tnote{a} & 2441.0\hphantom{0} & 0.0\hphantom{0} \\
+0.001 & 4130.0\tnote{b} & 4129.3\hphantom{0} & 0.16\\ \botrule
+\end{tabular}
+\begin{tablenotes}
+\item[a] Sample table notes.
+\item[b] Sample table notes.
+\end{tablenotes}
+\label{aba:tbl1}
+\end{wstable}
+
+\def\p{\phantom{$-$}}
+\def\pc{\phantom{,}}
+\def\p0{\phantom{0}}
+\begin{rotatetable}
+\caption{Positive values of $X_0$ by eliminating $Q_0$ from Eqs.~(15)
+and (16) for different values of the parameters $f_0$, $\lambda_0$
+and $\alpha_0$ in various dimension.}
+\begin{tabular}{@{}ccccccccccc@{}}
+\toprule\\[-6pt]
+$f_0$ &$\lambda_0$ &$\alpha_0$
+&\multicolumn{8}{c}{Positive roots ($X_0$)}\\[3pt]
+\hline\\[-6pt]
+&& &4D &5D &6D &7D &8D &10D &12D &16D\\[3.5pt]
+\hline\\[-6pt]
+\phantom{1}$-0.033$ &0.034 &\phantom{0}0.1\phantom{.01} &6.75507\p0
+&4.32936\p0 &3.15991\p0 &2.44524\p0
+&1.92883\p0 &0.669541 &--- &---\\[3.5pt]
+&&&1.14476\pc\p0 &1.16321\pc\p0 &1.1879\pc\phantom{00}
+&1.22434\pc\p0 &1.29065\pc\p0
+&0.415056\pc\\[3.5pt]
+\phantom{1}$-0.1$\phantom{33} &0.333 &\phantom{0}0.2\phantom{.01}
+&3.15662\p0 &1.72737\p0 &--- &--- &--- &--- &--- &---\\[3.5pt]
+&&&1.24003\pc\p0 &1.48602\pc\p0\\[3.5pt]
+\phantom{1}$-0.301$ &0.302 &0.001
+&2.07773\p0 &--- &--- &--- &--- &--- &--- &---\\[3.5pt]
+&&&1.65625\pc\p0\\[3.5pt]
+\phantom{1}$-0.5$\phantom{01} &0.51\phantom{2} &\phantom{0}0.001
+&--- &--- &--- &--- &--- &--- &--- &---\\[3.5pt]
+$\phantom{1-}$0.1\phantom{01} &0.1\phantom{02}
+&\phantom{0}2\phantom{.001} &1.667\phantom{000}
+&1.1946\phantom{00,}
+&--- &--- &--- &--- &--- &---\\[3.5pt]
+&&&0.806578\pc &0.858211\pc\\[3.5pt]
+$\phantom{1-}$0.1\phantom{01} &0.1\phantom{33} &10\phantom{.001}
+&0.463679\pc &0.465426\pc &0.466489\pc &0.466499\pc
+&0.464947\pc &0.45438\pc\p0 &0.429651\pc &0.35278\pc\\[3.5pt]
+$\phantom{1-}$0.1\phantom{01} &1\phantom{.333}
+&\phantom{0}0.2\phantom{01}
+&--- &--- &--- &--- &--- &--- &--- &---\\[3.5pt]
+$\phantom{1-}$0.1\phantom{01} &5\phantom{.333}
+&\phantom{0}5\phantom{.001}
+&--- &--- &--- &--- &--- &--- &--- &---\\[3.5pt]
+$\phantom{-0}$1\phantom{.033} &0.001 &\phantom{0}2\phantom{.001}
+&0.996033 &0.968869 &0.91379\p0 &0.848544&0.783787 &0.669541
+&0.577489 &---\\[3.5pt]
+&&&0.414324\pc &0.41436\pc\p0 &0.414412\pc &0.414489\pc &0.414605\pc
+&0.415056\pc &0.416214\pc\\[3.5pt]
+\phantom{10}\phantom{.033} &0.001 &\phantom{0}0.2\phantom{01}
+&0.316014 &0.309739 &--- &--- &--- &--- &--- &---\\[3.5pt]
+&&&0.275327\pc &0.275856\pc\\[3.5pt]
+\phantom{10}\phantom{.033} &0.1\phantom{33}
+&\phantom{0}5\phantom{.001} &0.089435\pc &0.089441\pc &0.089435\pc
+&0.089409\pc &0.08935\pc\p0
+&0.089061\pc &0.088347\pc &0.084352\pc\\[3.5pt]
+\phantom{10}\phantom{.033} &1\phantom{.333}
+&\phantom{0}3\phantom{.001} &0.128192\pc &0.128966\pc &0.19718\p0
+&0.169063 &0.142103
+&--- &--- &---\\[3.5pt]
+&&&& &0.41436\pc\p0 &0.414412\pc &0.414489\pc\\[3pt]
+\Hline
+\end{tabular}
+\label{aba:tbl2}
+\end{rotatetable}
+
+By using \verb|wstable| environment, long captions will be justified to the table width while the short or single line captions are centered.
+
+For most tables, the horizontal rules are obtained by:
+
+\begin{tabular}{ll}
+{\bf toprule} & one rule at the top\\
+{\bf colrule}& one rule separating column heads from data cells\\
+{\bf botrule}& one bottom rule\\
+{\bf Hline} & one thick rule at the top and bottom of the tables with multiple column heads\\
+\end{tabular}
+
+To avoid the rules sticking out at either end
+of the table, add \verb|@{}| before the first and after the last descriptors, {\it e.g.}
+{@{}llll@{}}. Please avoid vertical rules in tables.
+But if you think the vertical rule is a must,
+you can use the standard \LaTeX{} \verb|tabular| environment.
+Headings which span for more than one column should be set using
+\verb|\multicolumn{#1}{#2}{#3}| where \verb|#1| is the number of
+columns to be spanned, \verb|#2| is the argument for the alignment
+of the column head which may be either {c} --- for center
+alignment; {l} --- for left alignment; or {r} --- for right
+alignment, as desired by the users. Use {c} for column heads as
+this is the WS style and \verb|#3| is the heading.
+
+\section{Cross-references}
+Use \verb|\label| and \verb|\ref| for cross-references to
+equations, figures, tables, sections, subsections, {\it etc.}, instead
+of plain numbers. Every numbered part to which one wants to refer,
+should be labeled with the instruction \verb|\label|.
+For example:
+\begin{verbatim}
+\begin{equation}
+\mu(n, t)=\frac{\sum\limits^\infty_{i=1}1 (d_i < t, N(d_i)=n)}...\label{aba:eq1}
+\end{equation}
+\end{verbatim}
+With the instruction \verb|\ref| one can refer to a numbered part
+that has been labeled:
+\begin{verbatim}
+..., see also Eq. (\ref{aba:eq1})
+\end{verbatim}
+
+The \verb|\label| instruction should be typed
+\begin{itemlist}
+\item immediately after (or one line below), but not inside the argument of
+a number-generating instruction such as \verb|\section| or \verb|\caption|, {\it e.g.}:
+\verb|\caption{ ... caption ... }\label{aba:fig1}|.
+\item roughly in the position where the number appears, in environments
+such as an equation,
+\item labels should be unique, {\it e.g.}, equation 1 can be labeled as
+\verb|\label{aba:eq1}|, where `{\tt aba}' is author's initial and
+`{\tt eq1}' the equation number.
+\end{itemlist}
+
+\section{Footnotes}
+Footnotes should be numbered sequentially in superscript
+lowercase alphabets.\footnote{Footnotes should be
+typeset in 8~pt Times Roman at the bottom of the page.}
+
+\section{References}
+References cited in the text should be placed within parentheses and stated as (surname of author(s), year of
+publication), {\it e.g.}, \cite{Golub89} and, with three
+or more authors, \cite{blain02}. If the reference reads as part of
+the sentence, the square brackets enclose only the year of
+publication, {\it e.g.}, ``According to \citet{Golub89}, \ldots''
+
+\section*{Note Added}
+A note can be added before Acknowledgments.
+
+\section*{Acknowledgments}
+This part should come before References. Funding information may also be included here.
+
+\section*{Appendices}
+Appendices should be used only
+when absolutely necessary. They should come immediately before
+References.
+
+\appendix{} % optional title or empty braces must
+If there is more than one appendix, number them alphabetically.
+
+\noindent
+\begin{equation}
+\mu(n, t) = \frac{\displaystyle\sum^\infty_{i=1} 1(d_i < t, N(d_i) = n)}
+{\displaystyle\int^t_{\sigma=0} 1(N(\sigma) = n)d\sigma}\,\,
+.\label{aba:a.1}
+\end{equation}
+Number displayed equations occurring in the appendix as (\ref{aba:a.1}),
+(A.2), {\it etc.}
+
+\begin{theorem}
+Sample.
+\end{theorem}
+
+\begin{lemma}
+Sample.
+\end{lemma}
+
+\section*{References}
+\noindent A complete list of references cited, arranged in
+alphabetical order according to the surname of the first author,
+should be provided. References by the same author will follow a
+chronological sequence, {\it i.e.}, \cite{Lie00} precedes \cite{Lie01}.
+Article titles should be stated in full but standard abbreviations
+should be used for journal names. Typeset reference in 10 pt Times
+Roman, single spaced with baselineskip of 12 pt.
+
+\begin{thebibliography}{9}
+
+\bibitem[Blain {\it et al.}(2002)]{blain02} Blain, A. W., Smail, I., Ivison, R., Kneib, J.-P., Frayer, D. T. [2002] {\it Phys. Rep.} {\bf 369}, 111.
+
+\bibitem[Devlin M. {\it et al.} (2001)]{devlin01} Devlin, M. [2001]  {\it Deep Millimetre Surveys, Implications for Galaxy Formation and Evolution}, eds. Lowenthal, J., Hughes, D. H. (World Scientific, Singapore), p. 59 (astro-ph/0012327).
+
+\bibitem[Capak {\it et al.}(2011)]{capak2011} Capak, P., {\it et al.} [2011] {\it Nature} {\bf 470}, 233.
+
+\bibitem[Coppin {\it et al.}(2010)]{coppin2010} Coppin, K. E. K., {\it et al.} [2010] {\it MNRAS} {\bf 407}, L103.
+
+\bibitem[Golub \& Van Loan(1989)]{Golub89} Golub, G. H. \& Van Loan, C. F. [1989] {\it Matrix Computations}, 2nd Ed. (Johns Hopkins University Press, USA).
+
+\bibitem[Greenhill {et al.}(2004a)]{green04a} Greenhill, L. J., Gezari, D. Y., Danchi, W. C., {\it et al.} [2004a], {\it ApJ\/} {\bf 605}, L57.
+
+\bibitem[Greenhill {et al.}(2004b)]{green04b} Greenhill, L. J., Reid, M. J., Chandler, C. J., Diamond, P. J. \& Elitzur, M. [2004b] ``Star Formation at High Angular Resolution,'' in {\it IAU Symp. 221}, eds. Burton, M., Jayawardhana, R. \& Bourke, T. (Cambridge University Press, Cambridge), p.~155.
+
+\bibitem[Lie \& Wang(2000)]{Lie00} Lie, D. Y. C. \& Wang, K. L. [2000]
+{\it Handbook of Advanced Electronic and Photonic Devices and
+Materials}, ed.~Nalwa, H. S. (Academic Press, San Diego), p.~1.
+
+\bibitem[Lie \& Wang(2001)]{Lie01} Lie, D. Y. C. \& Wang, K. L. [2001]
+{\it Semiconductors and Semimetals} {\bf 73}, eds.~Willardson, R.
+\& Weber, E. (Academic Press, San Diego), p.~151.
+
+\bibitem[Parssinen {\it et al.}(1999)]{Par99} P\"arssinen, A., Jussila, J., Ryyn\"anen, J.,
+Sumanen, L. \& Halonen, K. A. I. [1999] {\it IEEE J. Solid-State
+Circuits} {\bf 34}, 1893.
+
+\bibitem[Zhu~\& Leung, 1999]{EKF_DrLeung3}
+Zhu, Z. \& Leung, H. [1999] {\it IEEE Trans. Circ. Syst.-I\/$:$ Fund. Th. Appl.} {\bf 46},
+1320.
+
+\end{thebibliography}
+\end{document}

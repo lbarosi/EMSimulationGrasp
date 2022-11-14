@@ -1,0 +1,28 @@
+ 
+ GRASP-SE version 10.3.0 (Linux amd64/em64t 64-bit)
+ 
+ (Student edition limited to 1 CPU core)
+ 
+ Program started at 16:07:34 on 14 November 2022
+GRASP-SE>COMMAND OBJECT dual_sub_po get_currents ( source : sequence(ref(dual_feed)))   dual_po_sub 
+ ----- TASK No. 1 -----     Started at 16:07:34 on November 14, 2022             
+  PO1 =  170  PO2 =  570  Face =    1, Final PO-values from auto-convergence
+  PTD =  560              Edge =    1, Final PTD-value from auto-convergence.
+  Spill-over:     0.0439 dB
+ Total task time:  1.94 sec               
+GRASP-SE>COMMAND OBJECT dual_main_po get_currents ( source : sequence(ref(dual_sub_po)))   dual_po_main 
+ ----- TASK No. 2 -----     Started at 16:07:36 on November 14, 2022             
+  PO1 =  305  PO2 =  940  Face =    1, Final PO-values from auto-convergence
+  PTD =  940              Edge =    1, Final PTD-value from auto-convergence.
+  Spill-over:     0.0510 dB
+ Total task time: 18:53 min               
+GRASP-SE>COMMAND OBJECT dual_cut get_field ( source : sequence(ref(dual_main_po)))   dual_get_field 
+ ----- TASK No. 3 -----     Started at 16:26:29 on November 14, 2022             
+ Total task time:  4.33 sec               
+GRASP-SE>COMMAND OBJECT dual_cut add_field ( source : sequence(ref(dual_sub_po),   ref(dual_feed))) dual_add_field_feed 
+ ----- TASK No. 4 -----     Started at 16:26:33 on November 14, 2022             
+ Total task time:  1.62 sec               
+GRASP-SE>QUIT 
+ ----- END OF TASKS -----     Completed at 16:26:35 on November 14, 2022         
+ Total time was 19:00 min
+ Program stopped at 16:26:35 on 14 November 2022

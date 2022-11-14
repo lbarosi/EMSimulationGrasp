@@ -1,0 +1,112 @@
+dual_main_reflector  reflector  
+(
+  coor_sys         : ref(dual_global_coor),
+  surface          : ref(dual_main_surface),
+  rim              : ref(dual_main_rim)
+)
+ 
+dual_global_coor  coor_sys  
+(
+)
+ 
+dual_main_surface  paraboloid  
+(
+  focal_length     : 140.0 m
+)
+ 
+dual_main_rim  elliptical_rim  
+(
+  centre           : struct(x: -226.541493021072 m, y: 0.0 m),
+  half_axis        : struct(x: 20.0 m, y: 20.0 m)
+)
+ 
+dual_sub_reflector  reflector  
+(
+  coor_sys         : ref(dual_sub_coor),
+  surface          : ref(dual_sub_surface),
+  rim              : ref(dual_sub_rim)
+)
+ 
+dual_sub_surface  hyperboloid  
+(
+  vertex_distance  : -148.235294117647 m,
+  foci_distance    : 252.0 m
+)
+ 
+dual_sub_rim  elliptical_rim  
+(
+  centre           : struct(x: 26.2883073820653 m, y: 0.0 m),
+  half_axis        : struct(x: 18.3404080531778 m, y: 17.7752910981323 m)
+)
+ 
+dual_feed  gaussian_beam_pattern  
+(
+  frequency        : ref(dual_frequencies),
+  coor_sys         : ref(corneta_coor),
+  taper_angle      : 17.980892142304,
+  taper            : -20.0
+)
+ 
+dual_frequencies  frequency  
+(
+  frequency_list   : sequence(1.1 GHz)
+)
+ 
+dual_feed_coor  coor_sys  
+(
+  origin           : struct(x: -24.4995706211461 m, y: 0.0 m, z: 26.3920209836301 m),
+  x_axis           : struct(x: -0.370196566475551, y: 0.0, z: -0.928953444565288),
+  y_axis           : struct(x: 0.0, y: 1.0, z: 0.0),
+  base             : ref(dual_cut_coor)
+)
+
+dual_cut  spherical_cut  
+(
+  coor_sys         : ref(dual_cut_coor),
+  theta_range      : struct(start: -5.0, end: 95.0, np: 3001),
+  phi_range        : struct(start: 0.0, end: 0.0, np: 1),
+  file_name        : bingo.cut,
+  comment          : "Field data in cuts"
+)
+ 
+dual_cut_coor  coor_sys  
+(
+  origin           : struct(x: -226.541493021072 m, y: 0.0 m, z: 91.6447286789582 m),
+  base             : ref(dual_global_coor)
+)
+ 
+dual_main_po  po_single_face_scatterer  
+(
+  frequency        : ref(dual_frequencies),
+  scatterer        : ref(dual_main_reflector)
+)
+ 
+dual_sub_po  po_single_face_scatterer  
+(
+  frequency        : ref(dual_frequencies),
+  scatterer        : ref(dual_sub_reflector)
+)
+ 
+spherical_grid  spherical_grid  
+(
+  coor_sys         : ref(dual_cut_coor),
+  x_range          : struct(start: -0.2, end: 0.2, np: 151),
+  y_range          : struct(start: -0.2, end: 0.2, np: 151),
+  file_name        : " "
+)
+ 
+corneta_coor  coor_sys  
+(
+  origin           : struct(x: 0.0 cm, y: 0.0 m, z: 0.0 m),
+  x_axis           : struct(x: 1.0, y: 0.0, z: 0.0),
+  y_axis           : struct(x: 0.0, y: 1.0, z: 0.0),
+  base             : ref(dual_feed_coor)
+)
+ 
+dual_sub_coor  coor_sys
+(
+  origin           : struct(x: 226.5414993 m, y: 0 m, z: 48.4352713 m),
+  x_axis           : struct(x: 0.871557553071891E-01, y: 0.0, z: -0.996194696992929),
+  y_axis           : struct(x: 0.0, y: -1.0, z: 0.0),
+  base             : ref(dual_cut_coor)
+)

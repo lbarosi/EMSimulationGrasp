@@ -1,0 +1,21 @@
+ <OutputFiles>
+  <File Path="bingo.tci" Type="tci" Format="Text" Object="unknown"/>
+  <File Path="bingo.tor" Type="tor" Format="Text" Object="unknown"/>
+  <File Path="bingo.log" Type="log" Format="Text" Object="unknown"/>
+  <File Path="bingo.out" Type="out" Format="Text" Object="unknown"/>
+  <File Path="bingo.cut" Type="Cut:Spherical" Format="Ticra" Object="dual_cut">
+    <Parameter Name="Frequency" Values=" 1.10000000000000" Unit="GHz" />
+    <Parameter Name="Phi" Values="[0.000000000000000E+000;0.000000000000000E+000;1]" Unit="deg" />
+    <Parameter Name="Theta" Values="[-5.00000000000000;95.0000000000000;3001]" Unit="deg" />
+  </File>
+  <File Path="bingo.cut" Type="Cut:Spherical" Format="Ticra" Object="dual_cut">
+    <Parameter Name="Frequency" Values=" 1.10000000000000" Unit="GHz" />
+    <Parameter Name="Phi" Values="[0.000000000000000E+000;0.000000000000000E+000;1]" Unit="deg" />
+    <Parameter Name="Theta" Values="[-5.00000000000000;95.0000000000000;3001]" Unit="deg" />
+  </File>
+  <File Path="bingo.cut" Type="Cut:Spherical" Format="Ticra" Object="dual_cut">
+    <Parameter Name="Frequency" Values=" 1.10000000000000" Unit="GHz" />
+    <Parameter Name="Phi" Values="[0.000000000000000E+000;0.000000000000000E+000;1]" Unit="deg" />
+    <Parameter Name="Theta" Values="[-5.00000000000000;95.0000000000000;3001]" Unit="deg" />
+  </File>
+ </OutputFiles>

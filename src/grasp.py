@@ -96,10 +96,18 @@ def plot_beam_pattern(data, ax=None, label="padrão", norm=True):
     #ax.plot(data.theta, 10 * np.log10(EEx))
     ax.grid(axis="y")
     #ax.set_ylim([-100, 0])
-    ax.set_xlabel(r"$\theta (\^\circ)$")
+    ax.set_xlabel(r"$\theta (^\circ)$")
     ax.set_ylabel("Amplitude (dB)")
     ax.legend()
     return ax
+
+def normalize(data):
+    columns = ["Gain", "eta_spill", "eta_pol", "eta_amp", "eta_phase", "Gain_Max"]
+    zero_values = data[data.Values == 0]
+    for column in columns:
+        new_columns = "delta_" + column
+        data[new_columns] = np.abs(data[column] - zero_values[column].values)/ zero_values[column].values
+    return data.sort_values(by="Values")
 
 #######################################
 # Utilidades para padrão de radiação

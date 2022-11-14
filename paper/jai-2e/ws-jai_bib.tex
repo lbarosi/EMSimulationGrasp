@@ -1,0 +1,56 @@
+\documentclass{ws-jai}
+\def\btex{B{\sc IB}\TeX\ }
+\begin{document}
+\catchline{}{}{}{}{} % Publisher's Area please ignore
+\markboth{WSPC}{Using World Scientific's \btex\/ Style File}
+
+\title{JAI \btex Style Guide}
+
+\maketitle
+
+\section{Usage}
+
+\begin{verbatim}
+\documentclass{ws-jai}
+\begin{document}
+Sample output using ws-jai bibliography style file ...
+...text.\cite{best,pier,jame} ...
+\bibliographystyle{ws-jai}
+\bibliography{sample}
+\end{document}
+\end{verbatim}
+
+\section{\btex{} Database Entries}
+
+\begin{center}
+\tablefont
+\begin{tabular}{@{}ll@{}}\toprule
+\multicolumn{1}{c}{\btex}\\
+\multicolumn{1}{c}{Database}  & \multicolumn{1}{c}{Sample citation}\\
+\multicolumn{1}{c}{entry type}\\\colrule
+
+article & ... \citep{best03,pier02,jame02}\\
+
+book & ... \citep{jarl88,rich60}\\
+
+edition & ... \cite{chur90}\\
+
+editor & ... \cite{benh93}\\
+
+series & ... \cite{bake72}\\
+
+\botrule
+\end{tabular}
+\end{center}
+
+Some more options:
+
+\verb|\cite{best03}| $=>$ \cite{best03}
+
+\verb|\citet{best03}| $=>$ \citet{best03}
+
+\bibliographystyle{ws-jai}
+
+\bibliography{sample}
+
+\end{document}

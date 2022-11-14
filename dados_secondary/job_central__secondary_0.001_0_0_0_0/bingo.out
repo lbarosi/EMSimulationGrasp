@@ -1,0 +1,709 @@
+ 
+ 
+                                    G R A S P 9 - S E
+                                    =================
+ 
+  Student edition of General multi-reflector analysis program
+ 
+ GRASP-SE version 10.3.0 (Linux amd64/em64t 64-bit)
+ 
+ 
+ GRASP-SE found  20 CPU cores
+ (Student edition limited to 1 CPU core)
+ 
+  Reading tor-file: bingo.tor
+ 
+ 
+  *** Object name:  dual_main_reflector
+  *** Class name :  reflector
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_main_reflector
+  *** Class name :  reflector
+  *** Message    :  New values in object
+ 
+  Coordinate system: dual_global_coor
+  Surface: dual_main_surface
+  Rim: dual_main_rim
+ 
+ 
+  *** Object name:  dual_global_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_global_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Z_axis :     0.000000    0.000000    1.000000
+ 
+ 
+  *** Object name:  dual_main_surface
+  *** Class name :  paraboloid
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_main_surface
+  *** Class name :  paraboloid
+  *** Message    :  New values in object
+ 
+ 
+  Focal length     :    140.000 m
+   and in SI units :    140.000 meter
+ 
+ 
+  *** Object name:  dual_main_rim
+  *** Class name :  elliptical_rim
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_main_rim
+  *** Class name :  elliptical_rim
+  *** Message    :  Definition of elliptical_rim
+ 
+  The rim centre is placed at
+    x :   -226.541 m
+    y :    0.00000 m
+  and in SI units
+    x :   -226.541     meter
+    y :    0.00000     meter
+ 
+  The half axes of the ellipse are defined by
+    in x-direction :    20.0000 m
+    in y-direction :    20.0000 m
+  and in SI units
+    in x-direction :    20.0000     meter
+    in y-direction :    20.0000     meter
+ 
+  The rim limits in radii are
+    minimum :    20.0000     meter
+    maximum :    20.0000     meter
+ 
+  The rim limits in x direction are
+    minimum :   -246.541     meter
+    maximum :   -206.541     meter
+ 
+  The rim limits in y direction are
+    minimum :   -20.0000     meter
+    maximum :    20.0000     meter
+ 
+ 
+  *** Object name:  dual_sub_reflector
+  *** Class name :  reflector
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_reflector
+  *** Class name :  reflector
+  *** Message    :  New values in object
+ 
+  Coordinate system: dual_sub_coor
+  Surface: dual_sub_surface
+  Rim: dual_sub_rim
+ 
+ 
+  *** Object name:  dual_sub_surface
+  *** Class name :  hyperboloid
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_surface
+  *** Class name :  hyperboloid
+  *** Message    :  New values in object
+ 
+ 
+  Distance between the vertices, 2a :   -148.235 m
+   and in SI units                  :   -148.235 meter
+ 
+  Distance between the foci, 2c     :    252.000 m
+   and in SI units                  :    252.000 meter
+ 
+    giving the eccentricity         :   -1.70000
+ 
+ 
+  *** Object name:  dual_sub_rim
+  *** Class name :  elliptical_rim
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_rim
+  *** Class name :  elliptical_rim
+  *** Message    :  Definition of elliptical_rim
+ 
+  The rim centre is placed at
+    x :    26.2883 m
+    y :    0.00000 m
+  and in SI units
+    x :    26.2883     meter
+    y :    0.00000     meter
+ 
+  The half axes of the ellipse are defined by
+    in x-direction :    18.3404 m
+    in y-direction :    17.7753 m
+  and in SI units
+    in x-direction :    18.3404     meter
+    in y-direction :    17.7753     meter
+ 
+  The rim limits in radii are
+    minimum :    17.7753     meter
+    maximum :    18.3404     meter
+ 
+  The rim limits in x direction are
+    minimum :    7.94790     meter
+    maximum :    44.6287     meter
+ 
+  The rim limits in y direction are
+    minimum :   -17.7753     meter
+    maximum :    17.7753     meter
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  New values in object
+ 
+  Frequency : dual_frequencies
+  Coor_sys : corneta_coor
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  Definition of common feed attributes
+ 
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  Definition of gaussian feed
+ 
+ 
+  Taper angle :   17.9809 degrees
+ 
+  Taper compared to on-axis level :  -20.0000 dB
+ 
+  The imaginary displacement along the negative z-axis
+    is   7.42280 wavelengths
+ 
+ 
+  *** Object name:  dual_frequencies
+  *** Class name :  frequency
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_frequencies
+  *** Class name :  frequency
+  *** Message    :  New values in object
+ 
+  Frequency No.    1  :   0.110000E+01 GHz
+ 
+ 
+  *** Object name:  dual_feed_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_feed_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Origin :  -0.244996E+02 m     0.000000E+00 m     0.263920E+02 m
+  Base name : dual_cut_coor
+  X_axis :    -0.370197    0.000000   -0.928953
+  Y_axis :     0.000000    1.000000    0.000000
+  Z_axis :     0.928953    0.000000   -0.370197
+ 
+ 
+  *** Object name:  dual_cut
+  *** Class name :  spherical_cut
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_cut
+  *** Class name :  spherical_cut
+  *** Message    :  New values in object
+ 
+  File name : bingo.cut
+  Coor_sys : dual_cut_coor
+  Theta range : start  -5.00000    end  95.00000    points  3001
+  Phi range : start   0.00000    end   0.00000    points     1
+ 
+ 
+  *** Object name:  dual_cut_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_cut_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Origin :  -0.226541E+03 m     0.000000E+00 m     0.916447E+02 m
+  Base name : dual_global_coor
+  Z_axis :     0.000000    0.000000    1.000000
+ 
+ 
+  *** Object name:  dual_main_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_main_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  New values in object
+ 
+  Frequency : dual_frequencies
+  Scatterer : dual_main_reflector
+ 
+ 
+  *** Object name:  dual_sub_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  New values in object
+ 
+  Frequency : dual_frequencies
+  Scatterer : dual_sub_reflector
+ 
+ 
+  *** Object name:  spherical_grid
+  *** Class name :  spherical_grid
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  spherical_grid
+  *** Class name :  spherical_grid
+  *** Message    :  New values in object
+ 
+  File name :
+  Coor_sys : dual_cut_coor
+  X range : start  -0.20000    end   0.20000    points   151
+  Y range : start  -0.20000    end   0.20000    points   151
+ 
+ 
+  *** Object name:  corneta_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  corneta_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Origin :   0.000000E+00 cm    0.000000E+00 m     0.000000E+00 m
+  Base name : dual_feed_coor
+  X_axis :     1.000000    0.000000    0.000000
+  Y_axis :     0.000000    1.000000    0.000000
+  Z_axis :     0.000000    0.000000    1.000000
+ 
+ 
+  *** Object name:  dual_sub_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Origin :   0.226542E+03 m     0.000000E+00 m     0.483553E+02 m
+  Base name : dual_cut_coor
+  X_axis :     0.087156    0.000000   -0.996195
+  Y_axis :     0.000000   -1.000000    0.000000
+  Z_axis :    -0.996195    0.000000   -0.087156
+ Program started at 17:06:50 on 14 November 2022
+ 
+ 
+ ----- TASK No. 1 -----     Started at 17:06:50 on November 14, 2022
+ dual_sub_po get_currents ( source : sequence(ref(dual_feed)))
+ 
+ 
+  *** Object name:  dual_sub_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  Get_currents message received
+ 
+  Source : dual_feed
+ 
+ 
+  *** Object name:  dual_sub_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  Initialization
+ 
+ 
+  Auto-convergence with desired accuracy of -80.00 dB.
+ 
+  Face 1:
+  Max. values: po1/po2 = 4410/10600
+ 
+ PO convergence
+  Test-grid  Ref-grid    Freq  Beam  Grid       P_max   P_level  Accuracy
+    po1/po2   po1/po2                           [dBi]     [dBi]      [dB]
+      20/10     10/10       1     1     1      -18.61    -18.61      3.03
+      20/10     10/10       1     1     2       41.15     41.15     -0.06
+      20/10     10/10       1     1     3       24.64     24.64      2.18
+      40/10     20/10       1     1     1      -18.03    -18.03      1.67
+      40/10     20/10       1     1     2       36.65     36.65      0.94
+      40/10     20/10       1     1     3       22.58     22.58      3.71
+      80/10     40/10       1     1     1      -20.05    -20.05      0.63
+      80/10     40/10       1     1     2       34.11     34.11      3.56
+      80/10     40/10       1     1     3       23.61     23.61      1.58
+     160/10     80/10       1     1     1      -27.53    -27.53     -2.38
+     160/10     80/10       1     1     2       31.42     31.42     -1.10
+     160/10     80/10       1     1     3       12.89     12.89     -0.05
+     320/10    160/10       1     1     1      -27.60    -27.60   -235.59  *
+     320/10    160/10       1     1     2       27.96     27.96    -67.47
+     320/10    160/10       1     1     3        1.74      1.74    -41.24
+     640/10    320/10       1     1     2       27.96     27.96   -223.57  *
+     640/10    320/10       1     1     3        1.74      1.74   -205.39  *
+     240/10    640/10       1     1     2       27.96     27.96   -222.27  *
+     240/10    640/10       1     1     3        1.74      1.74   -203.91  *
+     200/10    640/10       1     1     2       27.96     27.96   -221.95  *
+     200/10    640/10       1     1     3        1.74      1.74   -203.89  *
+     180/10    640/10       1     1     2       27.96     27.96   -221.77  *
+     180/10    640/10       1     1     3        1.74      1.74   -203.54  *
+     170/10    640/10       1     1     2       27.96     27.96   -140.47  *
+     170/10    640/10       1     1     3        1.74      1.74   -114.51  *
+     165/10    640/10       1     1     2       27.96     27.96   -100.95  *
+     165/10    640/10       1     1     3        1.74      1.74    -74.78
+ 
+ PO convergence
+  Test-grid  Ref-grid    Freq  Beam  Grid       P_max   P_level  Accuracy
+    po1/po2   po1/po2                           [dBi]     [dBi]      [dB]
+      10/20     10/10       1     1     1      -18.61    -18.61      2.82
+      10/20     10/10       1     1     2       41.15     41.15      3.20
+      10/20     10/10       1     1     3       24.64     24.64      1.81
+      10/40     10/20       1     1     1      -16.54    -16.54      0.09
+      10/40     10/20       1     1     2       39.40     39.40      0.08
+      10/40     10/20       1     1     3       24.03     24.03      3.22
+      10/80     10/40       1     1     1      -21.87    -21.87     -0.80
+      10/80     10/40       1     1     2       36.96     36.96     -0.01
+      10/80     10/40       1     1     3       20.15     20.15      3.76
+     10/160     10/80       1     1     1      -21.87    -21.87     -0.17
+     10/160     10/80       1     1     2       31.93     31.93      0.77
+     10/160     10/80       1     1     3       16.93     16.93      1.38
+     10/320    10/160       1     1     1      -21.87    -21.87    -10.93
+     10/320    10/160       1     1     2       31.53     31.53     -2.50
+     10/320    10/160       1     1     3       15.77     15.77     -1.06
+     10/640    10/320       1     1     1      -21.87    -21.87    -29.80
+     10/640    10/320       1     1     2       24.90     27.96     -4.17
+     10/640    10/320       1     1     3       12.20     12.20     -2.35
+    10/1280    10/640       1     1     1      -21.87    -21.87   -252.33  *
+    10/1280    10/640       1     1     2       23.29     27.96   -248.99  *
+    10/1280    10/640       1     1     3        8.44      8.44   -244.67  *
+     10/480   10/1280       1     1     1      -21.87    -21.87   -250.95  *
+     10/480   10/1280       1     1     2       23.29     27.96    -18.59
+     10/480   10/1280       1     1     3        8.44      8.44     -7.88
+     10/560   10/1280       1     1     2       23.29     27.96    -94.78  *
+     10/560   10/1280       1     1     3        8.44      8.44    -76.12
+     10/600   10/1280       1     1     3        8.44      8.44   -231.69  *
+     10/580   10/1280       1     1     1      -21.87    -21.87   -251.45  *
+     10/580   10/1280       1     1     2       23.29     27.96   -164.14  *
+     10/580   10/1280       1     1     3        8.44      8.44   -144.81  *
+     10/570   10/1280       1     1     1      -21.87    -21.87   -251.77  *
+     10/570   10/1280       1     1     2       23.29     27.96   -128.54  *
+     10/570   10/1280       1     1     3        8.44      8.44   -108.85  *
+  PO1 =  170  PO2 =  570  Face =    1, Final PO-values from auto-convergence
+ 
+  Edge 1:
+  Max. value: ptd = 10600
+ 
+ PO convergence
+  Test-grid  Ref-grid    Freq  Beam  Grid       P_max   P_level  Accuracy
+        ptd       ptd                           [dBi]     [dBi]      [dB]
+         20        10       1     1     1      -74.44    -21.87    -51.95
+         20        10       1     1     2      -19.01     27.96    -47.58
+         20        10       1     1     3      -17.51      8.44    -26.63
+         40        20       1     1     1      -73.76    -21.87    -56.31
+         40        20       1     1     2      -20.56     27.96    -53.05
+         40        20       1     1     3      -21.10      8.44    -31.99
+         80        40       1     1     1      -75.29    -21.87    -55.79
+         80        40       1     1     2      -21.16     27.96    -51.82
+         80        40       1     1     3      -23.10      8.44    -36.03
+        160        80       1     1     1      -75.29    -21.87    -56.47
+        160        80       1     1     2      -25.94     27.96    -58.08
+        160        80       1     1     3      -30.02      8.44    -38.46
+        320       160       1     1     1      -75.29    -21.87    -65.27
+        320       160       1     1     2      -29.11     27.96    -59.50
+        320       160       1     1     3      -31.43      8.44    -39.99
+        640       320       1     1     1      -75.29    -21.87    -65.59
+        640       320       1     1     2      -31.76     27.96    -61.71
+        640       320       1     1     3      -34.34      8.44    -43.56
+       1280       640       1     1     1      -75.29    -21.87   -314.24  *
+       1280       640       1     1     2      -36.76     27.96   -160.32  *
+       1280       640       1     1     3      -43.02      8.44    -88.86  *
+        480      1280       1     1     1      -75.29    -21.87   -311.82  *
+        480      1280       1     1     2      -36.76     27.96    -63.75
+        480      1280       1     1     3      -43.02      8.44    -44.46
+        560      1280       1     1     2      -36.76     27.96   -103.82  *
+        560      1280       1     1     3      -43.02      8.44    -84.35  *
+        520      1280       1     1     1      -75.29    -21.87   -311.77  *
+        520      1280       1     1     2      -36.76     27.96    -68.94
+        520      1280       1     1     3      -43.02      8.44    -47.89
+        540      1280       1     1     2      -36.76     27.96    -74.23
+        540      1280       1     1     3      -43.02      8.44    -57.91
+        550      1280       1     1     2      -36.76     27.96    -83.86  *
+        550      1280       1     1     3      -43.02      8.44    -66.18
+  PTD =  560              Edge =    1, Final PTD-value from auto-convergence.
+ 
+  Relative power hitting scatterer:    0.989945
+  Spill-over:     0.0439 dB
+ 
+ ----- TASK No. 2 -----     Started at 17:06:50 on November 14, 2022
+ dual_main_po get_currents ( source : sequence(ref(dual_sub_po)))
+ 
+ 
+  *** Object name:  dual_main_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  Get_currents message received
+ 
+  Source : dual_sub_po
+ 
+ 
+  *** Object name:  dual_main_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  Initialization
+ 
+ 
+  Auto-convergence with desired accuracy of -80.00 dB.
+ 
+  Face 1:
+  Max. values: po1/po2 = 4890/11740
+ 
+  Name of currents file: tmp_0000
+ 
+  Control values found in the file:
+    No. of frequencies: 1
+    No. of beams      : 1
+    No. of faces      : 1
+    No. of edges      : 1
+    No. of gaps       : 0
+ 
+  Frequency number  1 :   1.100 GHz
+ 
+    Face No.      PO1       PO2     Partitions
+          1       170       570         7
+ 
+    Edge No.     PTD1
+          1       560
+ 
+ 
+ PO convergence
+  Test-grid  Ref-grid    Freq  Beam  Grid       P_max   P_level  Accuracy
+    po1/po2   po1/po2                           [dBi]     [dBi]      [dB]
+      20/10     10/10       1     1     1      -17.35    -17.35      2.69
+      20/10     10/10       1     1     2       42.97     42.97      2.66
+      20/10     10/10       1     1     3       51.68     51.68     -7.56
+      40/10     20/10       1     1     1      -20.50    -20.50      2.65
+      40/10     20/10       1     1     2       37.78     37.78      4.11
+      40/10     20/10       1     1     3       51.64     51.64    -11.17
+      80/10     40/10       1     1     1      -21.53    -21.53      1.62
+      80/10     40/10       1     1     2       39.49     39.49     -1.05
+      80/10     40/10       1     1     3       51.63     51.63    -54.15
+     160/10     80/10       1     1     1      -24.35    -24.35      1.52
+     160/10     80/10       1     1     2       35.76     35.76      1.66
+     160/10     80/10       1     1     3       51.64     51.64    -64.92
+     320/10    160/10       1     1     1      -27.62    -27.62     -2.03
+     320/10    160/10       1     1     2       35.77     35.77     -5.27
+     320/10    160/10       1     1     3       51.64     51.64   -219.05  *
+     640/10    320/10       1     1     1      -31.53    -31.53   -167.71  *
+     640/10    320/10       1     1     2       35.77     35.77   -229.30  *
+     240/10    640/10       1     1     1      -31.53    -31.53    -14.41
+     240/10    640/10       1     1     2       35.77     35.77    -54.22
+     280/10    640/10       1     1     1      -31.53    -31.53    -47.08
+     280/10    640/10       1     1     2       35.77     35.77    -89.59  *
+     300/10    640/10       1     1     1      -31.53    -31.53    -73.36
+     310/10    640/10       1     1     1      -31.53    -31.53   -110.47  *
+     305/10    640/10       1     1     1      -31.53    -31.53    -88.93  *
+     305/10    640/10       1     1     2       35.77     35.77   -228.95  *
+ 
+ PO convergence
+  Test-grid  Ref-grid    Freq  Beam  Grid       P_max   P_level  Accuracy
+    po1/po2   po1/po2                           [dBi]     [dBi]      [dB]
+      10/20     10/10       1     1     1      -17.35    -17.35      3.91
+      10/20     10/10       1     1     2       42.97     42.97      1.01
+      10/20     10/10       1     1     3       51.68     51.68     -8.89
+      10/40     10/20       1     1     1      -15.05    -15.05      0.08
+      10/40     10/20       1     1     2       41.69     41.69      1.73
+      10/40     10/20       1     1     3       51.65     51.65    -13.26
+      10/80     10/40       1     1     1      -19.01    -19.01     -0.86
+      10/80     10/40       1     1     2       39.14     39.14      1.44
+      10/80     10/40       1     1     3       51.66     51.66    -13.25
+     10/160     10/80       1     1     1      -23.88    -23.88      2.43
+     10/160     10/80       1     1     2       34.33     35.77     -0.18
+     10/160     10/80       1     1     3       51.66     51.66    -25.58
+     10/320    10/160       1     1     1      -24.44    -24.44      0.66
+     10/320    10/160       1     1     2       32.28     35.77     -4.08
+     10/320    10/160       1     1     3       51.66     51.66    -84.27  *
+     10/640    10/320       1     1     1      -29.43    -29.43      0.79
+     10/640    10/320       1     1     2       30.04     35.77     -7.70
+    10/1280    10/640       1     1     1      -34.24    -31.53     -7.93
+    10/1280    10/640       1     1     2       30.04     35.77    -18.47
+    10/2560   10/1280       1     1     1      -36.16    -31.53   -252.64  *
+    10/2560   10/1280       1     1     2       30.04     35.77   -258.15  *
+     10/960   10/2560       1     1     1      -36.16    -31.53   -148.60  *
+     10/960   10/2560       1     1     2       30.04     35.77   -259.79  *
+     10/800   10/2560       1     1     1      -36.16    -31.53    -15.67
+     10/800   10/2560       1     1     2       30.04     35.77    -35.24
+     10/880   10/2560       1     1     1      -36.16    -31.53    -26.79
+     10/880   10/2560       1     1     2       30.04     35.77    -76.42
+     10/920   10/2560       1     1     1      -36.16    -31.53    -52.83
+     10/920   10/2560       1     1     2       30.04     35.77   -183.84  *
+     10/940   10/2560       1     1     1      -36.16    -31.53    -92.71  *
+  PO1 =  305  PO2 =  940  Face =    1, Final PO-values from auto-convergence
+ 
+  Edge 1:
+  Max. value: ptd = 11740
+ 
+ PO convergence
+  Test-grid  Ref-grid    Freq  Beam  Grid       P_max   P_level  Accuracy
+        ptd       ptd                           [dBi]     [dBi]      [dB]
+         20        10       1     1     1      -79.15    -31.53    -50.86
+         20        10       1     1     2      -21.10     35.77    -58.61
+         20        10       1     1     3      -21.78     51.66    -77.83
+         40        20       1     1     1      -80.64    -31.53    -51.45
+         40        20       1     1     2      -23.70     35.77    -59.37
+         40        20       1     1     3      -24.54     51.66    -77.59
+         80        40       1     1     1      -84.45    -31.53    -56.93
+         80        40       1     1     2      -26.23     35.77    -65.10
+         80        40       1     1     3      -27.31     51.66    -79.11
+        160        80       1     1     1      -86.93    -31.53    -56.65
+        160        80       1     1     2      -26.51     35.77    -63.88
+        160        80       1     1     3      -28.82     51.66    -82.48  *
+        320       160       1     1     1      -91.00    -31.53    -60.37
+        320       160       1     1     2      -28.38     35.77    -70.17
+        320       160       1     1     3      -36.44     51.66   -114.64  *
+        640       320       1     1     1      -92.79    -31.53    -66.84
+        640       320       1     1     2      -28.38     35.77    -74.30
+       1280       640       1     1     1      -92.29    -31.53    -61.45
+       1280       640       1     1     2      -28.38     35.77    -79.35
+       2560      1280       1     1     1     -102.42    -31.53   -289.90  *
+       2560      1280       1     1     2      -28.38     35.77   -308.40  *
+        960      2560       1     1     1     -102.42    -31.53   -121.36  *
+        960      2560       1     1     2      -28.38     35.77   -140.79  *
+        800      2560       1     1     1     -102.42    -31.53    -64.18
+        800      2560       1     1     2      -28.38     35.77    -74.52
+        880      2560       1     1     1     -102.42    -31.53    -70.60
+        880      2560       1     1     2      -28.38     35.77    -97.65  *
+        920      2560       1     1     1     -102.42    -31.53    -79.23
+        940      2560       1     1     1     -102.42    -31.53   -111.42  *
+  PTD =  940              Edge =    1, Final PTD-value from auto-convergence.
+ 
+  Relative power hitting scatterer:    0.988330
+  Spill-over:     0.0510 dB
+ 
+ ----- TASK No. 3 -----     Started at 17:13:46 on November 14, 2022
+ dual_cut get_field ( source : sequence(ref(dual_main_po)))
+ 
+ 
+  *** Object name:  dual_cut
+  *** Class name :  spherical_cut
+  *** Message    :  Get_field message received
+ 
+  Source : dual_main_po
+ 
+  Name of currents file: tmp_0001
+ 
+  Control values found in the file:
+    No. of frequencies: 1
+    No. of beams      : 1
+    No. of faces      : 1
+    No. of edges      : 1
+    No. of gaps       : 0
+ 
+  Frequency number  1 :   1.100 GHz
+ 
+    Face No.      PO1       PO2     Partitions
+          1       305       940        19
+ 
+    Edge No.     PTD1
+          1       940
+ 
+ 
+ 
+  *** Object name:  dual_cut
+  *** Class name :  spherical_cut
+  *** Message    :  Field calculated
+ 
+  Frequency No. :     1
+  Beam No. :     1
+ 
+ ----- TASK No. 4 -----     Started at 17:13:51 on November 14, 2022
+ dual_cut add_field ( source : sequence(ref(dual_sub_po), ref(dual_feed)))
+ 
+ 
+  *** Object name:  dual_cut
+  *** Class name :  spherical_cut
+  *** Message    :  Add_field message received
+ 
+  Source : dual_sub_po
+  Source : dual_feed
+ 
+  Name of currents file: tmp_0000
+ 
+  Control values found in the file:
+    No. of frequencies: 1
+    No. of beams      : 1
+    No. of faces      : 1
+    No. of edges      : 1
+    No. of gaps       : 0
+ 
+  Frequency number  1 :   1.100 GHz
+ 
+    Face No.      PO1       PO2     Partitions
+          1       170       570         7
+ 
+    Edge No.     PTD1
+          1       560
+ 
+ 
+ 
+  *** Object name:  dual_cut
+  *** Class name :  spherical_cut
+  *** Message    :  Field calculated
+ 
+  Frequency No. :     1
+  Beam No. :     1
+ 
+ 
+  *** Object name:  dual_cut
+  *** Class name :  spherical_cut
+  *** Message    :  Field calculated
+ 
+  Frequency No. :     1
+  Beam No. :     1
+ 
+ ----- END OF TASKS -----     Completed at 17:13:52 on November 14, 2022
+ Total time was 7:02 min
+ Program stopped at 17:13:52 on 14 November 2022
+ 
