@@ -1,0 +1,415 @@
+ 
+ 
+                                    G R A S P 9 - S E
+                                    =================
+ 
+  Student edition of General multi-reflector analysis program
+ 
+ GRASP-SE version 10.3.0 (Linux amd64/em64t 64-bit)
+ 
+ 
+ GRASP-SE found   8 CPU cores
+ (Student edition limited to 1 CPU core)
+ 
+  Reading tor-file: BINGO_SIMPLES.tor
+ 
+ 
+  *** Object name:  dual_main_reflector
+  *** Class name :  reflector
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_main_reflector
+  *** Class name :  reflector
+  *** Message    :  New values in object
+ 
+  Coordinate system: dual_global_coor
+  Surface: dual_main_surface
+  Rim: dual_main_rim
+ 
+ 
+  *** Object name:  dual_global_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_global_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Z_axis :     0.000000    0.000000    1.000000
+ 
+ 
+  *** Object name:  dual_main_surface
+  *** Class name :  paraboloid
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_main_surface
+  *** Class name :  paraboloid
+  *** Message    :  New values in object
+ 
+ 
+  Focal length     :    140.000 m
+   and in SI units :    140.000 meter
+ 
+ 
+  *** Object name:  dual_main_rim
+  *** Class name :  elliptical_rim
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_main_rim
+  *** Class name :  elliptical_rim
+  *** Message    :  Definition of elliptical_rim
+ 
+  The rim centre is placed at
+    x :   -226.541 m
+    y :    0.00000 m
+  and in SI units
+    x :   -226.541     meter
+    y :    0.00000     meter
+ 
+  The half axes of the ellipse are defined by
+    in x-direction :    20.0000 m
+    in y-direction :    20.0000 m
+  and in SI units
+    in x-direction :    20.0000     meter
+    in y-direction :    20.0000     meter
+ 
+  The rim limits in radii are
+    minimum :    20.0000     meter
+    maximum :    20.0000     meter
+ 
+  The rim limits in x direction are
+    minimum :   -246.541     meter
+    maximum :   -206.541     meter
+ 
+  The rim limits in y direction are
+    minimum :   -20.0000     meter
+    maximum :    20.0000     meter
+ 
+ 
+  *** Object name:  dual_sub_reflector
+  *** Class name :  reflector
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_reflector
+  *** Class name :  reflector
+  *** Message    :  New values in object
+ 
+  Coordinate system: dual_sub_coor
+  Surface: dual_sub_surface
+  Rim: dual_sub_rim
+ 
+ 
+  *** Object name:  dual_sub_surface
+  *** Class name :  hyperboloid
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_surface
+  *** Class name :  hyperboloid
+  *** Message    :  New values in object
+ 
+ 
+  Distance between the vertices, 2a :   -148.235 m
+   and in SI units                  :   -148.235 meter
+ 
+  Distance between the foci, 2c     :    252.000 m
+   and in SI units                  :    252.000 meter
+ 
+    giving the eccentricity         :   -1.70000
+ 
+ 
+  *** Object name:  dual_sub_rim
+  *** Class name :  elliptical_rim
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_rim
+  *** Class name :  elliptical_rim
+  *** Message    :  Definition of elliptical_rim
+ 
+  The rim centre is placed at
+    x :    26.2883 m
+    y :    0.00000 m
+  and in SI units
+    x :    26.2883     meter
+    y :    0.00000     meter
+ 
+  The half axes of the ellipse are defined by
+    in x-direction :    18.3404 m
+    in y-direction :    17.7753 m
+  and in SI units
+    in x-direction :    18.3404     meter
+    in y-direction :    17.7753     meter
+ 
+  The rim limits in radii are
+    minimum :    17.7753     meter
+    maximum :    18.3404     meter
+ 
+  The rim limits in x direction are
+    minimum :    7.94790     meter
+    maximum :    44.6287     meter
+ 
+  The rim limits in y direction are
+    minimum :   -17.7753     meter
+    maximum :    17.7753     meter
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  New values in object
+ 
+  Frequency : dual_frequencies
+  Coor_sys : corneta_coor
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  Definition of common feed attributes
+ 
+ 
+ 
+  *** Object name:  dual_feed
+  *** Class name :  gaussian_beam_pattern
+  *** Message    :  Definition of gaussian feed
+ 
+ 
+  Taper angle :   17.9809 degrees
+ 
+  Taper compared to on-axis level :  -20.0000 dB
+ 
+  The imaginary displacement along the negative z-axis
+    is   7.42280 wavelengths
+ 
+ 
+  *** Object name:  dual_frequencies
+  *** Class name :  frequency
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_frequencies
+  *** Class name :  frequency
+  *** Message    :  New values in object
+ 
+  Frequency No.    1  :   0.110000E+01 GHz
+ 
+ 
+  *** Object name:  dual_feed_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_feed_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Origin :   0.000000E+00 m     0.000000E+00 m     0.252000E+03 m
+  Base name : dual_sub_coor
+  X_axis :     0.893154    0.000000    0.449751
+  Y_axis :     0.000000   -1.000000    0.000000
+  Z_axis :     0.449751    0.000000   -0.893154
+ 
+ 
+  *** Object name:  dual_cut
+  *** Class name :  spherical_cut
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_cut
+  *** Class name :  spherical_cut
+  *** Message    :  New values in object
+ 
+  File name : dual_cut.cut
+  Coor_sys : dual_cut_coor
+  Theta range : start -10.00000    end  10.00000    points   551
+  Phi range : start   0.00000    end   0.00000    points     1
+ 
+ 
+  *** Object name:  dual_cut_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_cut_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Origin :  -0.226541E+03 m     0.000000E+00 m     0.916447E+02 m
+  Base name : dual_global_coor
+  Z_axis :     0.000000    0.000000    1.000000
+ 
+ 
+  *** Object name:  dual_main_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_main_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  New values in object
+ 
+  Frequency : dual_frequencies
+  Scatterer : dual_main_reflector
+ 
+ 
+  *** Object name:  dual_sub_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_po
+  *** Class name :  po_single_face_scatterer
+  *** Message    :  New values in object
+ 
+  Frequency : dual_frequencies
+  Scatterer : dual_sub_reflector
+ 
+ 
+  *** Object name:  spherical_grid
+  *** Class name :  spherical_grid
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  spherical_grid
+  *** Class name :  spherical_grid
+  *** Message    :  New values in object
+ 
+  File name :
+  Coor_sys : dual_cut_coor
+  X range : start  -0.20000    end   0.20000    points   151
+  Y range : start  -0.20000    end   0.20000    points   151
+ 
+ 
+  *** Object name:  corneta_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  corneta_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Origin :   0.100000E+02 cm    0.000000E+00 m     0.000000E+00 m
+  Base name : dual_feed_coor
+  Z_axis :     0.000000    0.000000    1.000000
+ 
+ 
+  *** Object name:  dual_sub_coor
+  *** Class name :  coor_sys
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  dual_sub_coor
+  *** Class name :  coor_sys
+  *** Message    :  New values in object
+ 
+  Origin :   0.000000E+00 m     0.000000E+00 m     0.140000E+03 m
+  Base name : dual_global_coor
+  X_axis :     0.087156    0.000000   -0.996195
+  Y_axis :     0.000000   -1.000000    0.000000
+  Z_axis :    -0.996195    0.000000   -0.087156
+ 
+ 
+  *** Object name:  view_1
+  *** Class name :  view
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  view_1
+  *** Class name :  view
+  *** Message    :  New values in object
+ 
+ 
+  Number of objects :      4
+ 
+  Definition of objects   :
+   No.  Name
+     1  view_1_reflector_plot
+     2  view_1_coor_sys_plot
+     3  view_1_feed_plot
+     4  view_1_output_points_plot
+ 
+ 
+ 
+  *** Object name:  view_1_reflector_plot
+  *** Class name :  reflector_plot
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  view_1_reflector_plot
+  *** Class name :  reflector_plot
+  *** Message    :  Definition of reflector_plot
+ 
+ 
+ 
+  *** Object name:  view_1_coor_sys_plot
+  *** Class name :  coor_sys_plot
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  view_1_coor_sys_plot
+  *** Class name :  coor_sys_plot
+  *** Message    :  Definition of coor_sys_plot
+ 
+ 
+ 
+  *** Object name:  view_1_feed_plot
+  *** Class name :  feed_plot
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  view_1_feed_plot
+  *** Class name :  feed_plot
+  *** Message    :  Definition of feed_plot
+ 
+ 
+ 
+  *** Object name:  view_1_output_points_plot
+  *** Class name :  output_points_plot
+  *** Message    :  Object created
+ 
+ 
+ 
+  *** Object name:  view_1_output_points_plot
+  *** Class name :  output_points_plot
+  *** Message    :  Definition of output_points_plot
+ 
+ Total time was 0.02 sec
+ Program stopped at 14:58:13 on 14 November 2022
+ 

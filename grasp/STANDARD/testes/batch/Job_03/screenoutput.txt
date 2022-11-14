@@ -1,0 +1,66 @@
+ Tci file: Job_03.tci
+ Out file: Job_03.out
+ Log file: Job_03.log
+ 
+ 
+ GRASP-SE version 10.3.0 (Linux amd64/em64t 64-bit)
+ 
+ 
+ GRASP-SE found   8 CPU cores
+ (Student edition limited to 1 CPU core)
+ 
+ ----- TASK No. 1 -----     Started at 16:35:28 on November 12, 2022
+ 
+ dual_sub_po get_currents ( source : sequence(ref(dual_feed)))
+ 
+  PO1 =  170  PO2 =  570  Face =    1, Final PO-values from auto-convergence 
+  PTD =  570              Edge =    1, Final PTD-value from auto-convergence. 
+ 
+  Calculating currents.
+  No. of PO-points (target):              62350                               
+  No. of PTD points (target):               570 
+ 
+  Relative power hitting scatterer:    0.989947
+  Spill-over:     0.0439 dB
+ Total task time:  1.31 sec
+ 
+ ----- TASK No. 2 -----     Started at 16:35:30 on November 12, 2022
+ 
+ dual_main_po get_currents ( source : sequence(ref(dual_sub_po)))
+ 
+  PO1 =  305  PO2 =  940  Face =    1, Final PO-values from auto-convergence 
+  PTD =  940              Edge =    1, Final PTD-value from auto-convergence. 
+ 
+  Calculating currents.
+  No. of PO-points (target):             183690                               
+  No. of PO points (source):              62350 
+  No. of PTD points (source):               570                      
+  No. of PTD points (target):               940                      
+ Estimated task time: 13:38 min, Estimated remaining time:  0.54 sec  
+ 
+  Relative power hitting scatterer:    0.988332
+  Spill-over:     0.0510 dB
+                                                                     
+ Total task time: 13:38 min
+ 
+ ----- TASK No. 3 -----     Started at 16:49:08 on November 12, 2022
+ 
+ dual_cut get_field ( source : sequence(ref(dual_main_po)))
+ 
+  No. of field points:                      501 
+  No. of PO points (source):             183690 
+  No. of PTD points (source):               940 
+ Total task time:  1.90 sec
+ 
+ ----- TASK No. 4 -----     Started at 16:49:10 on November 12, 2022
+ 
+ dual_cut add_field ( source : sequence(ref(dual_sub_po), ref(dual_feed)))
+ 
+  No. of field points:                      501 
+  No. of PO points (source):              62350 
+  No. of PTD points (source):               570 
+ Total task time:  0.71 sec
+ 
+ ----- END OF TASKS -----     Completed at 16:49:11 on November 12, 2022
+ 
+ Total time was 13:42 min

@@ -1,0 +1,12 @@
+ 
+ GRASP-SE version 10.3.0 (Linux amd64/em64t 64-bit)
+ 
+ (Student edition limited to 1 CPU core)
+ 
+ERROR: Illegal function argument >auto_convergence_of_po< 
+In function: dual_po_sub 
+Of class   : get_currents 
+ 
+ 
+ Total time was 0.02 sec
+ Program stopped at 14:58:13 on 14 November 2022

@@ -1,0 +1,26 @@
+[Comment]
+Project comment
+[TOR file]
+working/BINGO_SIMPLES.tor
+[Auxiliary TOR files]
+[TCI file]
+working/BINGO_SIMPLES.tci
+[Default units]
+GHz m S/m 1
+[Project setup]
+<!DOCTYPE Project>
+<Project version="10.3.0" application="GRASP">
+ <Results>
+  <Analysis Path="Job_01" Name="Job_01">
+   <Objects Path="Job_01.tor"/>
+   <Commands Path="Job_01.tci"/>
+   <Output Path="output_files_14011.xml"/>
+   <Job NumCommands="4" StartTime="2022-11-11T08:48:38" JobProcessID="14011" JobOutputSpec="output_files_14011.xml" JobHidden="false" JobStatus="Job Finished" Name="Job_01"/>
+  </Analysis>
+ </Results>
+ <ResultWindows/>
+ <WizardData/>
+ <view_configuration>
+  <view pos="0x0" show_surfaces="yes" minimized="no" view_settings_dialog_splitter_state="" enable_psi_slider="no" translation="-220.4911809531667,-102.3619373321261,-133.5819383719239" name="view_1" perspective_view="no" show_rulers="yes" enable_phi_slider="no" view_settings_dialog_state="AdnQywABAAAAAAd2AAAAvwAACvcAAANiAAAHgAAAAOwAAArtAAADWAAAAAAAAA==" collapsed_view_settings_entries="" disabled_toolbars="" locked_phi_theta="no" rotation="1.591370831362446,1.572827684410701,0.00252084941072428" size="1296x628" enable_theta_slider="no" visible="yes" maximized="no" orientation_type="0" show_wire_grid="yes"/>
+ </view_configuration>
+</Project>

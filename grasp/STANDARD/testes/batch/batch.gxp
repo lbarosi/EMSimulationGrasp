@@ -1,0 +1,72 @@
+[Comment]
+Project comment
+[TOR file]
+working/batch.tor
+[Auxiliary TOR files]
+[TCI file]
+working/batch.tci
+[Default units]
+GHz m S/m 1
+[Project setup]
+<!DOCTYPE Project>
+<Project version="10.3.0" application="GRASP">
+ <Results>
+  <Analysis Path="Job_01" Name="Job_01">
+   <Objects Path="Job_01.tor"/>
+   <Commands Path="Job_01.tci"/>
+   <Output Path="output_files_55341.xml"/>
+   <Job NumCommands="4" StartTime="2022-11-11T16:47:22" JobProcessID="55341" JobOutputSpec="output_files_55341.xml" JobHidden="false" JobStatus="Job Finished" Name="Job_01"/>
+  </Analysis>
+ </Results>
+ <ResultWindows>
+  <PlotWidget type="Field:RadiationPattern">
+   <Title text="Job_01 → dual_cut → Radiation Pattern" font="MS Shell Dlg 2,14,-1,5,75,0,0,0,0,0"/>
+   <Axis useFixedStep="0" fontLabel="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0" id="0" spacing="2" text="Amplitude" tickUnit="0" stepMinor="5" minimum="-29.4756" colorBarWidth="10" appendUnit="1" stepMajor="10" maximum="55.4905" enabled="1" fontNumeral="MS Shell Dlg 2,10,-1,5,50,0,0,0,0,0" unit="dB" inverted="0" startAt="0" margin="0"/>
+   <Axis minimum="0" maximum="1000" enabled="0" colorBarWidth="10" inverted="0" id="1" fontLabel="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0" fontNumeral="MS Shell Dlg 2,10,-1,5,50,0,0,0,0,0" spacing="2" margin="0"/>
+   <Axis useFixedStep="2" fontLabel="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0" id="2" spacing="2" text="θ" tickUnit="0" stepMinor="5" minimum="-5" colorBarWidth="10" appendUnit="1" stepMajor="45" maximum="5" enabled="1" fontNumeral="MS Shell Dlg 2,10,-1,5,50,0,0,0,0,0" unit="deg" inverted="0" startAt="0" margin="0"/>
+   <Axis minimum="0" maximum="1000" enabled="0" colorBarWidth="10" inverted="0" id="3" fontLabel="MS Shell Dlg 2,12,-1,5,75,0,0,0,0,0" fontNumeral="MS Shell Dlg 2,10,-1,5,50,0,0,0,0,0" spacing="2" margin="0"/>
+   <Canvas color_r="255" color_a="255" color_b="255" color_g="255"/>
+   <Grid>
+    <Component direction="0" active="2"/>
+    <Component direction="1" active="2"/>
+    <PenMinor width="0" color_r="160" color_a="255" color_b="164" color_g="160" style="3"/>
+    <PenMajor width="0" color_r="192" color_a="255" color_b="192" color_g="192" style="1"/>
+   </Grid>
+   <PlotCurve type="Field:RadiationPattern">
+    <EDIFile xmlHeader="&lt;!DOCTYPE FileMetaData>&#xa;&lt;Parameters>&#xa; &lt;File Format=&quot;Ticra&quot; Path=&quot;bingo.cut&quot; Type=&quot;Cut:Spherical&quot; Object=&quot;dual_cut&quot; Hash=&quot;8267224796ed61cf76f875e5e6d478e1&quot;>&#xa; &lt;Parameter Values=&quot; 1.10000000000000&quot; Unit=&quot;GHz&quot; Name=&quot;Frequency&quot;/>&#xa; &lt;Parameter Values=&quot;[0.000000000000000E+000;0.000000000000000E+000;1]&quot; Unit=&quot;deg&quot; Name=&quot;Phi&quot;/>&#xa; &lt;Parameter Values=&quot;[-5.00000000000000;5.00000000000000;501]&quot; Unit=&quot;deg&quot; Name=&quot;Theta&quot;/>&#xa; &lt;/File>&#xa;&lt;/Parameters>&#xa;" name="Job_01/bingo.cut" time="2022-11-11T17:05:16"/>
+    <Line width="2" color_r="0" color_a="255" color_b="0" color_g="0"/>
+    <Symbol size="5" style="-1"/>
+    <Curve Offset="0" fitted="0" visible="1" inverted="0" style="1" Peak="false "/>
+    <Font data="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
+    <Legend text="1,1 GHz → E_co → 0,0 deg [Amplitude]"/>
+    <Axis y-axis="left" x-axis="bottom"/>
+    <Parameter class="Frequency" begin="0" length="0"/>
+    <Parameter class="Phi" begin="0" length="0"/>
+    <Parameter class="ProjectionComponents:Ludwig3" begin="0" length="0"/>
+    <Parameter class="Theta" begin="0" length="501"/>
+    <Format to="0"/>
+    <Variable nameEDX="" className="Field:RadiationPattern"/>
+   </PlotCurve>
+   <PlotCurve type="Field:RadiationPattern">
+    <EDIFile xmlHeader="&lt;!DOCTYPE FileMetaData>&#xa;&lt;Parameters>&#xa; &lt;File Format=&quot;Ticra&quot; Path=&quot;bingo.cut&quot; Type=&quot;Cut:Spherical&quot; Object=&quot;dual_cut&quot; Hash=&quot;8267224796ed61cf76f875e5e6d478e1&quot;>&#xa; &lt;Parameter Values=&quot; 1.10000000000000&quot; Unit=&quot;GHz&quot; Name=&quot;Frequency&quot;/>&#xa; &lt;Parameter Values=&quot;[0.000000000000000E+000;0.000000000000000E+000;1]&quot; Unit=&quot;deg&quot; Name=&quot;Phi&quot;/>&#xa; &lt;Parameter Values=&quot;[-5.00000000000000;5.00000000000000;501]&quot; Unit=&quot;deg&quot; Name=&quot;Theta&quot;/>&#xa; &lt;/File>&#xa;&lt;/Parameters>&#xa;" name="Job_01/bingo.cut" time="2022-11-11T17:05:16"/>
+    <Line width="2" color_r="255" color_a="255" color_b="0" color_g="0"/>
+    <Symbol size="5" style="-1"/>
+    <Curve Offset="0" fitted="0" visible="1" inverted="0" style="1" Peak="false "/>
+    <Font data="Sans Serif,9,-1,5,50,0,0,0,0,0"/>
+    <Legend text="1,1 GHz → E_cx → 0,0 deg [Amplitude]"/>
+    <Axis y-axis="left" x-axis="bottom"/>
+    <Parameter class="Frequency" begin="0" length="0"/>
+    <Parameter class="Phi" begin="0" length="0"/>
+    <Parameter class="ProjectionComponents:Ludwig3" begin="1" length="0"/>
+    <Parameter class="Theta" begin="0" length="501"/>
+    <Format to="0"/>
+    <Variable nameEDX="" className="Field:RadiationPattern"/>
+   </PlotCurve>
+   <Legend ratio="0.3" position="1"/>
+  </PlotWidget>
+ </ResultWindows>
+ <WizardData/>
+ <view_configuration>
+  <view pos="0x0" show_surfaces="yes" minimized="no" view_settings_dialog_splitter_state="" enable_psi_slider="no" translation="-224.5227159707194,-99.65224904979024,-109.2839507455994" name="view_1" perspective_view="no" show_rulers="yes" enable_phi_slider="no" view_settings_dialog_state="AdnQywABAAAAAAImAAAAzgAABVkAAAKUAAACMAAAAPsAAAVPAAACigAAAAEAAA==" collapsed_view_settings_entries="" disabled_toolbars="" locked_phi_theta="yes" rotation="1.570796326794896,1.570796326794897,0" size="843x619" enable_theta_slider="no" visible="yes" maximized="no" orientation_type="3" show_wire_grid="yes"/>
+ </view_configuration>
+</Project>
