@@ -3,3 +3,8 @@ data/
 .ipynb_che*
 refs/
 scratchbook/
+*.aux
+*.fls
+*.synctex.gz
+*.latexmk
+*.bbl

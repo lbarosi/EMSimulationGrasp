@@ -99,7 +99,7 @@ def plot_beam_pattern(data, ax=None, label="padrão", norm=True):
         fig, ax = plt.subplots()
     ax.plot(data.theta, 10 * np.log10(EE), label=label)
     #ax.plot(data.theta, 10 * np.log10(EEx))
-    ax.grid(axis="y")
+    ax.grid(axis="y", linewidth=.1)
     #ax.set_ylim([-100, 0])
     ax.set_xlabel(r"$\theta (^\circ)$")
     ax.set_ylabel("Amplitude (dB)")

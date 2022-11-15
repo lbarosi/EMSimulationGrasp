@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2020/Debian)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: paper.aux
 I couldn't open style file ws-jai.bst
----line 8 of file paper.aux
+---line 7 of file paper.aux
  : \bibstyle{ws-jai
  :                 }
 I'm skipping whatever remains of this command
